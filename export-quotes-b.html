@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Export quotes, journey · EximAgent Academy</title>
+  <meta name="description" content="Hire AI employees who read a buyer's RFQ, build the export price, and draft the quote and proforma invoice for you to check and send.">
+  <link rel="icon" href="images/eximagent-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="export-quotes-b.css">
+  <link rel="preload" as="image" href="images/xq/journey.webp">
+</head>
+<body class="xb">
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="index.html">
+        <img src="images/eximagent-mark.svg" alt="">
+        <span class="word">EximAgent <span>Academy</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="https://eximagent.ai/agents">Agents</a>
+        <a href="https://eximagent.ai/platform">Platform</a>
+        <a href="https://eximagent.ai/about">About</a>
+        <a href="https://eximagent.ai/cli">CLI</a>
+        <a href="https://eximagent.ai/connectors">Connectors</a>
+        <a href="https://eximagent.ai/resources">Resources</a>
+        <a href="https://eximagent.ai/pricing">Pricing</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-outline btn-md" href="https://eximagent.ai/">Contact us</a>
+        <a class="btn btn-primary btn-md" href="https://eximagent.ai/">Try EximAgent</a>
+      </div>
+    </div>
+  </header>
+  <div class="subnav">
+    <div class="row">
+      <nav aria-label="Academy">
+        <a href="#">Courses</a>
+        <a class="active" href="index.html" aria-current="page">Use cases</a>
+        <a href="#">Glossary</a>
+        <a href="#">Guides</a>
+        <a href="#">My learning</a>
+      </nav>
+    </div>
+  </div>
+  <main>
+
+    <section class="b-hero">
+      <div class="container">
+        <div class="b-hero-copy">
+          <ol class="crumbs">
+            <li><a href="index.html">Academy</a></li>
+            <li class="sep" aria-hidden="true">›</li>
+            <li><a href="index.html">Use cases</a></li>
+            <li class="sep" aria-hidden="true">›</li>
+            <li>Export quotes</li>
+          </ol>
+          <h1>From buyer RFQ to export quote</h1>
+          <p>Your AI employees price every leg of the trip, then draft the quote and PI.</p>
+          <a class="btn btn-primary btn-lg" href="https://eximagent.ai/">Build your quoting team</a>
+        </div>
+        <div class="b-map">
+          <img src="images/xq/journey.webp" alt="Clay illustration of an export route: farm, warehouse, truck, port crane, container ship, and harbor city." width="1280" height="720">
+          <button type="button" class="pin" style="left:28%;top:30%" data-pin><img src="images/mascots/md/outbound.webp" alt=""><span class="bub"><b>Sales</b>Coffee cost and your margin</span></button>
+<button type="button" class="pin" style="left:44%;top:40%" data-pin><img src="images/mascots/md/expo.webp" alt=""><span class="bub"><b>Trade-Ops</b>Trucking and customs</span></button>
+<button type="button" class="pin" style="left:58%;top:22%" data-pin><img src="images/mascots/md/expo.webp" alt=""><span class="bub"><b>Trade-Ops</b>Loading at Cat Lai</span></button>
+<button type="button" class="pin" style="left:84%;top:22%" data-pin><img src="images/mascots/md/analyst.webp" alt=""><span class="bub"><b>Analyst</b>Buyer in Hamburg checked</span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section b-journey" id="journey">
+      <div class="container">
+        <div class="b-head">
+          <h2>Follow the container</h2>
+          <div class="meter" aria-live="polite">
+            <span class="m-label">Your quote</span>
+            <span class="m-term" data-mterm>Reading the RFQ</span>
+            <span class="m-price"><small>USD</small> <b data-mprice>…</b> <small>/ MT</small></span>
+            <span class="m-dots" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></span>
+          </div>
+        </div>
+        <div class="track-wrap">
+          <div class="track" data-track tabindex="0" aria-label="Export route, swipe or use arrows">
+          <article class="stn" data-term="Reading the RFQ" data-price="">
+            <img class="stn-img" src="images/xq/desk.webp" alt="An exporter's desk with a laptop and coffee." loading="lazy">
+            <div class="stn-num">1</div>
+            <h3>The RFQ lands</h3>
+            <div class="stn-says"><div class="say"><img src="images/mascots/md/outbound.webp" alt=""><p>Jonas wants 19.2 MT Robusta G1, CIF Hamburg.</p></div><div class="say"><img src="images/mascots/md/analyst.webp" alt=""><p>New buyer in Germany. Screening clear.</p></div></div>
+          </article>
+          <article class="stn" data-term="EXW Buon Ma Thuot" data-price="4,852">
+            <img class="stn-img" src="images/xq/warehouse.webp" alt="Coffee sacks in a warehouse." loading="lazy">
+            <div class="stn-num">2</div>
+            <h3>Your warehouse</h3>
+            <div class="stn-says"><div class="say"><img src="images/mascots/md/outbound.webp" alt=""><p>Coffee cost from your price list, plus your 5% margin.</p></div></div>
+          </article>
+          <article class="stn" data-term="FCA Cat Lai terminal" data-price="4,882">
+            <img class="stn-img" src="images/xq/truck.webp" alt="A container truck heading to a river port." loading="lazy">
+            <div class="stn-num">3</div>
+            <h3>On the road to Cat Lai</h3>
+            <div class="stn-says"><div class="say"><img src="images/mascots/md/expo.webp" alt=""><p>Trucking, customs and certificates added.</p></div></div>
+          </article>
+          <article class="stn" data-term="FOB Cat Lai" data-price="4,891">
+            <img class="stn-img" src="images/xq/crane.webp" alt="A crane loading a container onto a ship at dusk." loading="lazy">
+            <div class="stn-num">4</div>
+            <h3>Loaded on board</h3>
+            <div class="stn-says"><div class="say"><img src="images/mascots/md/expo.webp" alt=""><p>Terminal handling, B/L and seal added.</p></div></div>
+          </article>
+          <article class="stn" data-term="CFR Hamburg" data-price="5,003">
+            <img class="stn-img" src="images/xq/ship.webp" alt="A container ship at sea." loading="lazy">
+            <div class="stn-num">5</div>
+            <h3>Across the sea</h3>
+            <div class="stn-says"><div class="say"><img src="images/mascots/md/expo.webp" alt=""><p>Forwarder A at USD 2,150 per 20′ beats B.</p></div></div>
+          </article>
+          <article class="stn" data-term="CIF Hamburg" data-price="5,012">
+            <img class="stn-img" src="images/xq/arrival.webp" alt="A container ship arriving at a harbor city." loading="lazy">
+            <div class="stn-num">6</div>
+            <h3>Arriving in Hamburg</h3>
+            <div class="stn-says"><div class="say"><img src="images/mascots/md/expo.webp" alt=""><p>Insured at 110% of the invoice.</p></div></div>
+          </article>
+          </div>
+          <div class="track-nav">
+            <p class="b-note">Example deal with made-up numbers.</p>
+            <button type="button" class="tbtn" data-prev aria-label="Previous stop">←</button>
+            <button type="button" class="tbtn" data-next aria-label="Next stop">→</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section b-desk">
+      <div class="container b-desk-grid">
+        <img src="images/xq/rfq2quote.webp" alt="Clay illustration of a letter turning into a stack of documents beside a toy container." loading="lazy">
+        <div>
+          <h2>Back on your desk, ready to check</h2>
+          <div class="docs">
+            <div class="doc d1"><span class="dt">Reply to Jonas</span><i></i><i></i><i class="s"></i><i></i></div>
+            <div class="doc d2"><span class="dt">Quotation</span><b>CIF 5,012</b><i></i><i class="s"></i><i></i></div>
+            <div class="doc d3"><span class="dt">Proforma invoice</span><b>USD 96,230</b><i></i><i></i><i class="s"></i></div>
+          </div>
+          <p class="b-desk-line">You read the team's notes, then press send yourself.</p>
+          <button type="button" class="btn btn-primary btn-lg" data-send>Send</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-wrap">
+      <div class="container">
+        <h2>Questions</h2>
+        <div class="faq">
+          <details>
+            <summary>Who sends the quote?</summary>
+            <p>You do. You read the draft and the team's notes, change anything you like, and send it yourself.</p>
+          </details>
+          <details>
+            <summary>Where do the costs come from?</summary>
+            <p>From the price list, cost sheet, and freight rates you give them. It works with the apps you already use.</p>
+          </details>
+          <details>
+            <summary>Which Incoterms can they quote?</summary>
+            <p>Any Incoterms 2020 term, written with a named place. For containers they can add FCA next to FOB or CIF.</p>
+          </details>
+          <details>
+            <summary>What if the freight rate runs out before shipment?</summary>
+            <p>Trade-Ops points it out and adds a freight clause, so you can keep it or ask the forwarder for a new rate.</p>
+          </details>
+          <details>
+            <summary>Can I set up the team my own way?</summary>
+            <p>Yes. You hire each employee, write their role and responsibilities, and choose who hands work to whom.</p>
+          </details>
+          <details>
+            <summary>Does it work for products other than coffee?</summary>
+            <p>Yes. Rice, cashews, spices, seafood, or furniture follow the same steps with your own costs and rates.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="close-cta">
+        <h2>Quote your next RFQ with EximAgent</h2>
+        <a class="composer" href="https://eximagent.ai/">Build your quoting team <span class="go" aria-hidden="true">→</span></a>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="legal">
+      <a href="index.html">All use cases</a>
+    </div>
+  </footer>
+  <script src="export-quotes-b.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Export quotes, storyboard · EximAgent Academy</title>
+  <meta name="description" content="Hire AI employees who read a buyer's RFQ, build the export price, and draft the quote and proforma invoice for you to check and send.">
+  <link rel="icon" href="images/eximagent-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Geist+Mono:wght@400;500&display=swap&family=Fraunces:opsz,wght@9..144,600" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="export-quotes-c.css">
+  <link rel="preload" as="image" href="images/xq/ship.webp">
+</head>
+<body class="xc">
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="index.html">
+        <img src="images/eximagent-mark.svg" alt="">
+        <span class="word">EximAgent <span>Academy</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="https://eximagent.ai/agents">Agents</a>
+        <a href="https://eximagent.ai/platform">Platform</a>
+        <a href="https://eximagent.ai/about">About</a>
+        <a href="https://eximagent.ai/cli">CLI</a>
+        <a href="https://eximagent.ai/connectors">Connectors</a>
+        <a href="https://eximagent.ai/resources">Resources</a>
+        <a href="https://eximagent.ai/pricing">Pricing</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-outline btn-md" href="https://eximagent.ai/">Contact us</a>
+        <a class="btn btn-primary btn-md" href="https://eximagent.ai/">Try EximAgent</a>
+      </div>
+    </div>
+  </header>
+  <div class="subnav">
+    <div class="row">
+      <nav aria-label="Academy">
+        <a href="#">Courses</a>
+        <a class="active" href="index.html" aria-current="page">Use cases</a>
+        <a href="#">Glossary</a>
+        <a href="#">Guides</a>
+        <a href="#">My learning</a>
+      </nav>
+    </div>
+  </div>
+  <main>
+
+    <section class="c-hero">
+      <img class="c-hero-bg" src="images/xq/ship.webp" alt="" width="1280" height="720">
+      <div class="container c-hero-in">
+        <ol class="crumbs">
+            <li><a href="index.html">Academy</a></li>
+            <li class="sep" aria-hidden="true">›</li>
+            <li><a href="index.html">Use cases</a></li>
+            <li class="sep" aria-hidden="true">›</li>
+            <li>Export quotes</li>
+          </ol>
+        <h1>Your AI team turns RFQs into quotes</h1>
+        <p>Hire Sales, Trade-Ops and Analyst. They build the price and draft the quote and PI. You send it.</p>
+        <a class="btn btn-primary btn-lg" href="https://eximagent.ai/">Build your quoting team</a>
+      </div>
+    </section>
+
+    <section class="c-player-sec">
+      <div class="container">
+        <div class="player" data-player>
+          <div class="chapters" role="tablist" aria-label="How a quote comes together">
+            <button role="tab" type="button" class="ch" data-ch="0"><span>1</span>RFQ arrives<i></i></button>
+            <button role="tab" type="button" class="ch" data-ch="1"><span>2</span>Team splits it<i></i></button>
+            <button role="tab" type="button" class="ch" data-ch="2"><span>3</span>Price stacks up<i></i></button>
+            <button role="tab" type="button" class="ch" data-ch="3"><span>4</span>You send<i></i></button>
+          </div>
+          <div class="stage">
+            <div class="scene s1" data-scene>
+              <img class="bg" src="images/xq/desk.webp" alt="An exporter's desk with a laptop, green coffee and a phin coffee.">
+              <div class="phone">
+                <div class="ph-top"><span class="av">J</span><div><b>Jonas, Hamburg</b><small>coffee importer</small></div></div>
+                <div class="msg">Hi! Price for 1×20′ Robusta G1 S18, 19.2 MT?</div>
+                <div class="msg">CIF Hamburg, shipping January. L/C at sight is fine.</div>
+                <div class="pick"><img src="images/mascots/md/outbound.webp" alt="">Sales picked up the RFQ</div>
+              </div>
+            </div>
+            <div class="scene s2" data-scene>
+              <img class="bg" src="images/xq/warehouse.webp" alt="Coffee sacks in an export warehouse.">
+              <div class="crew">
+                <div class="mate"><img src="images/mascots/md/analyst.webp" alt=""><b>Analyst</b><p>Buyer screened. New buyer, so L/C.</p></div>
+                <div class="mate"><img src="images/mascots/md/outbound.webp" alt=""><b>Sales</b><p>Costs and your 5% margin pulled.</p></div>
+                <div class="mate"><img src="images/mascots/md/expo.webp" alt=""><b>Trade-Ops</b><p>Two freight rates in, A is cheaper.</p></div>
+              </div>
+            </div>
+            <div class="scene s3" data-scene>
+              <img class="bg" src="images/xq/crane.webp" alt="A crane loading a container onto a ship at dusk.">
+              <div class="stack">
+                <div class="box b5"><span>Insurance</span><em>CIF</em></div>
+                <div class="box b4"><span>Sea freight</span><em>CFR</em></div>
+                <div class="box b3"><span>Loading at Cat Lai</span><em>FOB</em></div>
+                <div class="box b2"><span>Truck and customs</span><em>FCA</em></div>
+                <div class="box b1"><span>Coffee and your margin</span><em>EXW</em></div>
+              </div>
+              <div class="total"><small>CIF Hamburg</small><b>USD 5,012</b><small>per MT</small></div>
+            </div>
+            <div class="scene s4" data-scene>
+              <img class="bg" src="images/xq/arrival.webp" alt="A harbor city with a container ship arriving.">
+              <div class="mail">
+                <div class="mail-h"><b>To Jonas</b><small>RE: RFQ Robusta G1, CIF Hamburg</small></div>
+                <p>Our offer: <b>USD 5,012 / MT CIF Hamburg</b>, L/C at sight, valid to 24 Nov.</p>
+                <div class="att"><span>Quotation.pdf</span><span>Proforma.pdf</span></div>
+                <div class="mail-f"><span class="you">You</span><span class="sendbtn">Send</span></div>
+              </div>
+            </div>
+          </div>
+          <div class="player-foot">
+            <button type="button" class="pp" data-pp aria-label="Pause">❚❚</button>
+            <span>Example deal with made-up numbers.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section c-team">
+      <div class="container">
+        <h2>Meet the team you hire</h2>
+        <div class="crew-cards">
+          <article class="cc cc-a"><img src="images/mascots/md/analyst.webp" alt="Analyst mascot" loading="lazy"><h3>Analyst</h3><p>Screens the buyer and picks safe payment terms.</p></article>
+          <article class="cc cc-s"><img src="images/mascots/md/outbound.webp" alt="Sales mascot" loading="lazy"><h3>Sales</h3><p>Reads the RFQ, prices it, and drafts the reply.</p></article>
+          <article class="cc cc-o"><img src="images/mascots/md/expo.webp" alt="Trade-Ops mascot" loading="lazy"><h3>Trade-Ops</h3><p>Gets freight, loading, and insurance right.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section c-get">
+      <div class="container">
+        <div class="get-stage">
+          <img src="images/xq/beans.webp" alt="" loading="lazy">
+          <h2>What lands on your desk</h2>
+          <div class="papers">
+            <div class="paper p1"><b>Reply email</b><i></i><i></i><i class="s"></i><i></i><i class="s"></i></div>
+            <div class="paper p2"><b>Quotation</b><strong>USD 5,012 / MT</strong><i></i><i class="s"></i><i></i><i></i></div>
+            <div class="paper p3"><b>Proforma invoice</b><strong>USD 96,230</strong><i></i><i></i><i class="s"></i><i></i></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-wrap">
+      <div class="container">
+        <h2>Questions</h2>
+        <div class="faq">
+          <details>
+            <summary>Who sends the quote?</summary>
+            <p>You do. You read the draft and the team's notes, change anything you like, and send it yourself.</p>
+          </details>
+          <details>
+            <summary>Where do the costs come from?</summary>
+            <p>From the price list, cost sheet, and freight rates you give them. It works with the apps you already use.</p>
+          </details>
+          <details>
+            <summary>Which Incoterms can they quote?</summary>
+            <p>Any Incoterms 2020 term, written with a named place. For containers they can add FCA next to FOB or CIF.</p>
+          </details>
+          <details>
+            <summary>What if the freight rate runs out before shipment?</summary>
+            <p>Trade-Ops points it out and adds a freight clause, so you can keep it or ask the forwarder for a new rate.</p>
+          </details>
+          <details>
+            <summary>Can I set up the team my own way?</summary>
+            <p>Yes. You hire each employee, write their role and responsibilities, and choose who hands work to whom.</p>
+          </details>
+          <details>
+            <summary>Does it work for products other than coffee?</summary>
+            <p>Yes. Rice, cashews, spices, seafood, or furniture follow the same steps with your own costs and rates.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="close-cta">
+        <h2>Quote your next RFQ with EximAgent</h2>
+        <a class="composer" href="https://eximagent.ai/">Build your quoting team <span class="go" aria-hidden="true">→</span></a>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="legal">
+      <a href="index.html">All use cases</a>
+    </div>
+  </footer>
+  <script src="export-quotes-c.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Export quotes, bento · EximAgent Academy</title>
+  <meta name="description" content="Hire AI employees who read a buyer's RFQ, build the export price, and draft the quote and proforma invoice for you to check and send.">
+  <link rel="icon" href="images/eximagent-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="export-quotes-a.css">
+  <link rel="preload" as="image" href="images/xq/warehouse.webp">
+</head>
+<body class="xa">
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="index.html">
+        <img src="images/eximagent-mark.svg" alt="">
+        <span class="word">EximAgent <span>Academy</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="https://eximagent.ai/agents">Agents</a>
+        <a href="https://eximagent.ai/platform">Platform</a>
+        <a href="https://eximagent.ai/about">About</a>
+        <a href="https://eximagent.ai/cli">CLI</a>
+        <a href="https://eximagent.ai/connectors">Connectors</a>
+        <a href="https://eximagent.ai/resources">Resources</a>
+        <a href="https://eximagent.ai/pricing">Pricing</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-outline btn-md" href="https://eximagent.ai/">Contact us</a>
+        <a class="btn btn-primary btn-md" href="https://eximagent.ai/">Try EximAgent</a>
+      </div>
+    </div>
+  </header>
+  <div class="subnav">
+    <div class="row">
+      <nav aria-label="Academy">
+        <a href="#">Courses</a>
+        <a class="active" href="index.html" aria-current="page">Use cases</a>
+        <a href="#">Glossary</a>
+        <a href="#">Guides</a>
+        <a href="#">My learning</a>
+      </nav>
+    </div>
+  </div>
+  <main>
+
+    <section class="a-hero">
+      <div class="container">
+        <div class="a-hero-stage">
+          <img class="a-hero-bg" src="images/xq/warehouse.webp" alt="Sacks of green robusta coffee in an export warehouse, with a container being loaded outside." width="1280" height="720">
+          <div class="a-hero-copy">
+            <ol class="crumbs">
+            <li><a href="index.html">Academy</a></li>
+            <li class="sep" aria-hidden="true">›</li>
+            <li><a href="index.html">Use cases</a></li>
+            <li class="sep" aria-hidden="true">›</li>
+            <li>Export quotes</li>
+          </ol>
+            <h1>Turn a buyer's RFQ into a quote</h1>
+            <p>Your AI employees read the request, build the price, and draft the quote and PI.</p>
+            <a class="btn btn-primary btn-lg" href="https://eximagent.ai/">Build your quoting team</a>
+          </div>
+          <div class="a-float a-rfq" aria-hidden="true">
+            <span class="a-from">Jonas · Hamburg importer</span>
+            Please quote Robusta G1, 1×20′, <b>CIF Hamburg</b>, shipment January.
+          </div>
+          <div class="a-float a-team" aria-hidden="true">
+            <img src="images/mascots/md/analyst.webp" alt=""><img src="images/mascots/md/outbound.webp" alt=""><img src="images/mascots/md/expo.webp" alt="">
+          </div>
+          <div class="a-float a-quote" aria-hidden="true">
+            <span class="a-qlabel">Quotation · Robusta G1 S18</span>
+            <span class="a-qprice">USD 5,012<small> / MT</small></span>
+            <span class="a-qterm">CIF Hamburg · L/C at sight</span>
+          </div>
+        </div>
+        <p class="a-note">Example deal with made-up numbers.</p>
+      </div>
+    </section>
+
+    <section class="section a-bento-sec">
+      <div class="container">
+        <h2>Three employees, one quote</h2>
+        <div class="bento">
+          <article class="tile t-big">
+            <img src="images/xq/beans.webp" alt="Green robusta beans in a sample tray next to a moisture meter." loading="lazy">
+            <div class="tile-ui ui-spec" aria-hidden="true">
+              <span>Robusta G1 · Screen 18</span><span>Moisture ≤ 12.5%</span><span>19.2 MT · 320 bags</span>
+            </div>
+            <div class="tile-cap"><img src="images/mascots/md/outbound.webp" alt=""><p><b>Sales</b> reads the RFQ and pulls your costs.</p></div>
+          </article>
+          <article class="tile">
+            <img src="images/xq/arrival.webp" alt="A harbor city with brick warehouses and a container ship arriving." loading="lazy">
+            <div class="tile-ui ui-check" aria-hidden="true"><i>✓</i> Buyer screened, Germany</div>
+            <div class="tile-cap"><img src="images/mascots/md/analyst.webp" alt=""><p><b>Analyst</b> checks the buyer first.</p></div>
+          </article>
+          <article class="tile">
+            <img src="images/xq/truck.webp" alt="A truck carrying a blue container toward a river port with gantry cranes." loading="lazy">
+            <div class="tile-cap"><img src="images/mascots/md/expo.webp" alt=""><p><b>Trade-Ops</b> adds trucking and customs to Cat Lai.</p></div>
+          </article>
+          <article class="tile t-wide">
+            <img src="images/xq/ship.webp" alt="A container ship at sea at sunrise." loading="lazy">
+            <div class="tile-ui ui-rates" aria-hidden="true">
+              <span class="pick"><b>Forwarder A</b> USD 2,150 / 20′</span>
+              <span><b>Forwarder B</b> USD 2,300 / 20′</span>
+            </div>
+            <div class="tile-cap"><img src="images/mascots/md/expo.webp" alt=""><p><b>Trade-Ops</b> compares freight and picks the better rate.</p></div>
+          </article>
+          <article class="tile t-wide">
+            <img src="images/xq/rfq2quote.webp" alt="Clay illustration of a letter turning into a stack of documents." loading="lazy">
+            <div class="tile-cap"><img src="images/mascots/md/outbound.webp" alt=""><p><b>Sales</b> drafts the quote and PI together.</p></div>
+          </article>
+          <article class="tile">
+            <img src="images/xq/crane.webp" alt="A crane loading a container onto a ship at dusk." loading="lazy">
+            <div class="tile-cap"><img src="images/mascots/md/expo.webp" alt=""><p><b>Trade-Ops</b> adds loading and insurance.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section a-terms-sec">
+      <div class="container">
+        <h2>Pick where your price stops</h2>
+        <div class="a-terms" data-aterms>
+          <button type="button" class="aterm" data-i="0"><img src="images/xq/warehouse.webp" alt="" loading="lazy"><span class="k">EXW</span><span class="p">4,852</span><span class="w">Your warehouse</span></button>
+          <button type="button" class="aterm" data-i="1"><img src="images/xq/truck.webp" alt="" loading="lazy"><span class="k">FCA</span><span class="p">4,882</span><span class="w">Cat Lai terminal</span></button>
+          <button type="button" class="aterm" data-i="2"><img src="images/xq/crane.webp" alt="" loading="lazy"><span class="k">FOB</span><span class="p">4,891</span><span class="w">On board</span></button>
+          <button type="button" class="aterm" data-i="3"><img src="images/xq/ship.webp" alt="" loading="lazy"><span class="k">CFR</span><span class="p">5,003</span><span class="w">Sea freight paid</span></button>
+          <button type="button" class="aterm" data-i="4"><img src="images/xq/arrival.webp" alt="" loading="lazy"><span class="k">CIF</span><span class="p">5,012</span><span class="w">Insured to Hamburg</span></button>
+        </div>
+        <p class="a-terms-hint">Tap a stop. Prices in USD per MT.</p>
+      </div>
+    </section>
+
+    <section class="section a-desk-sec">
+      <div class="container">
+        <div class="a-desk">
+          <img src="images/xq/desk.webp" alt="An exporter's desk with a laptop, a jar of green coffee and a Vietnamese phin coffee." loading="lazy">
+          <div class="a-desk-card">
+            <h2>You check it, then send</h2>
+            <ul>
+              <li><img src="images/mascots/md/outbound.webp" alt=""> Margin 4.86%, above your 4% floor</li>
+              <li><img src="images/mascots/md/expo.webp" alt=""> Freight ends 30 Nov, clause added</li>
+              <li><img src="images/mascots/md/analyst.webp" alt=""> New buyer, L/C at sight</li>
+            </ul>
+            <div class="a-files"><span>Quotation</span><span>Proforma invoice</span></div>
+            <button type="button" class="btn btn-primary btn-md" data-send>Send to Jonas</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq-wrap">
+      <div class="container">
+        <h2>Questions</h2>
+        <div class="faq">
+          <details>
+            <summary>Who sends the quote?</summary>
+            <p>You do. You read the draft and the team's notes, change anything you like, and send it yourself.</p>
+          </details>
+          <details>
+            <summary>Where do the costs come from?</summary>
+            <p>From the price list, cost sheet, and freight rates you give them. It works with the apps you already use.</p>
+          </details>
+          <details>
+            <summary>Which Incoterms can they quote?</summary>
+            <p>Any Incoterms 2020 term, written with a named place. For containers they can add FCA next to FOB or CIF.</p>
+          </details>
+          <details>
+            <summary>What if the freight rate runs out before shipment?</summary>
+            <p>Trade-Ops points it out and adds a freight clause, so you can keep it or ask the forwarder for a new rate.</p>
+          </details>
+          <details>
+            <summary>Can I set up the team my own way?</summary>
+            <p>Yes. You hire each employee, write their role and responsibilities, and choose who hands work to whom.</p>
+          </details>
+          <details>
+            <summary>Does it work for products other than coffee?</summary>
+            <p>Yes. Rice, cashews, spices, seafood, or furniture follow the same steps with your own costs and rates.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="close-cta">
+        <h2>Quote your next RFQ with EximAgent</h2>
+        <a class="composer" href="https://eximagent.ai/">Build your quoting team <span class="go" aria-hidden="true">→</span></a>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer">
+    <div class="legal">
+      <a href="index.html">All use cases</a>
+    </div>
+  </footer>
+  <script src="export-quotes-a.js" defer></script>
+</body>
+</html>
