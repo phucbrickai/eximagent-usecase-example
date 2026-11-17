@@ -10,7 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="website-builder">
   <header class="site-header">
     <div class="bar">
       <a class="brand" href="index.html">
@@ -46,7 +46,7 @@
 
   <main>
     <div class="container">
-      <header class="page-head">
+      <header class="page-head page-head-compact">
         <ol class="crumbs">
           <li><a href="index.html">Academy</a></li>
           <li class="sep" aria-hidden="true">›</li>
@@ -87,12 +87,22 @@
         </div>
       </div>
 
-      <div class="frame hero-visual">
-        <div class="swap" data-swap="hero">
-          <img class="is-current" src="images/templates/cashew/website-hero.jpg" alt="Finished website for Phuoc An Cashew in a browser, with product grades and a Request a quote button.">
-          <img class="is-next" alt="" aria-hidden="true">
+      <div class="prompt-chip prompt-chip-inline"><span class="dot">+</span> <span data-prompt>Hire a website team for our cashew export company</span></div>
+      <div class="frame hero-visual hero-browser" data-hero-frame>
+        <div class="hero-chrome">
+          <div class="hero-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="hero-url" data-hero-url>phuocancashew.com</div>
+          <a class="hero-open" data-open-site href="preview/cashew.html" target="_blank" rel="noopener">Open full site</a>
         </div>
-        <div class="prompt-chip"><span class="dot">+</span> <span data-prompt>Hire a website team for our cashew export company</span></div>
+        <div class="hero-stage-wrap">
+          <div class="hero-stage" data-hero-stage tabindex="0" role="region" aria-label="Scrollable preview of the template website">
+            <div class="swap" data-swap="hero">
+              <img class="is-current" src="images/templates/cashew/website-full.jpg" alt="Full website for Phuoc An Cashew, from the origin story and grades through certificates to a quote form. Scroll to see every section.">
+              <img class="is-next" alt="" aria-hidden="true">
+            </div>
+          </div>
+          <div class="hero-scroll-hint" data-scroll-hint><span>Scroll to see the full site</span></div>
+        </div>
       </div>
     </div>
 
@@ -333,7 +343,9 @@
         var p = BASE + slug + "/";
         return {
           prompt: parts.prompt,
-          hero: { src: p + "website-hero.jpg", alt: parts.hero },
+          hero: { src: p + "website-full.jpg", alt: parts.hero },
+          domain: parts.domain,
+          open: "preview/" + slug + ".html",
           seo: { src: p + "agent-seo.jpg", alt: parts.seo },
           designer: { src: p + "agent-designer.jpg", alt: parts.designer },
           writer: { src: p + "agent-writer.jpg", alt: parts.writer },
@@ -348,7 +360,8 @@
       var TEMPLATES = {
         cashew: pack("cashew", {
           prompt: "Hire a website team for our cashew export company",
-          hero: "Finished website for Phuoc An Cashew in a browser, with product grades and a Request a quote button.",
+          domain: "phuocancashew.com",
+          hero: "Full website for Phuoc An Cashew, from the origin story and grades through certificates to a quote form. Scroll to see every section.",
           seo: "SEO agent updating the Products meta title to W320 cashew supplier, after researching terms EU buyers use.",
           designer: "Designer arranging homepage, catalog, and quote form layout blocks for the cashew site.",
           writer: "Content Writer drafting the W320 product page from company-brain facts: products, certificates, and profile.",
@@ -361,7 +374,8 @@
         }),
         coffee: pack("coffee", {
           prompt: "Hire a website team for our coffee export company",
-          hero: "Finished website for Cerrado Alto Coffee in a browser, with green coffee grades and a Request a quote button.",
+          domain: "cerradoaltocoffee.com",
+          hero: "Full website for Cerrado Alto Coffee, with a side navigation, current lots, cupping notes, and a sample request. Scroll to see every section.",
           seo: "SEO agent updating the Products meta title to Arabica Grade 1 supplier, after researching terms EU roasters use.",
           designer: "Designer arranging homepage, catalog, and quote form layout blocks for the Cerrado Alto Coffee site.",
           writer: "Content Writer drafting the Arabica Grade 1 product page from company-brain facts: products, certificates, and profile.",
@@ -374,7 +388,8 @@
         }),
         durian: pack("durian", {
           prompt: "Hire a website team for our durian export company",
-          hero: "Finished website for Aroma King Durian in a browser, with fresh and frozen products and a Request a quote button.",
+          domain: "aromakingdurian.com",
+          hero: "Full website for Aroma King Durian, with product tiles, a cold-chain section, and a chat-style inquiry. Scroll to see every section.",
           seo: "SEO agent updating the Products meta title to Monthong durian exporter, after researching terms buyers use.",
           designer: "Designer arranging homepage, catalog, and quote form layout blocks for the Aroma King Durian site.",
           writer: "Content Writer drafting the Monthong pulp product page from company-brain facts: products, certificates, and profile.",
@@ -387,7 +402,8 @@
         }),
         spice: pack("spice", {
           prompt: "Hire a website team for our spice export company",
-          hero: "Finished website for Red Sail Spice in a browser, with black pepper, cinnamon, and star anise, and a Request a quote button.",
+          domain: "redsailspice.com",
+          hero: "Full website for Red Sail Spice, with a category sidebar, product specification table, and a request-for-quote form. Scroll to see every section.",
           seo: "SEO agent updating the Products meta title to ASTA black pepper supplier, after researching terms buyers use.",
           designer: "Designer arranging homepage, catalog, and quote form layout blocks for the Red Sail Spice site.",
           writer: "Content Writer drafting the black pepper product page from company-brain facts: products, certificates, and profile.",
@@ -477,10 +493,21 @@
           var on = b.getAttribute("data-template") === id;
           b.setAttribute("aria-pressed", on ? "true" : "false");
         });
+        var stage = document.querySelector("[data-hero-stage]");
+        if (stage) stage.scrollTop = 0;
+        var wrap = document.querySelector(".hero-stage-wrap");
+
+        var urlEl = document.querySelector("[data-hero-url]");
+        if (urlEl && t.domain) urlEl.textContent = t.domain;
+        document.querySelectorAll("[data-open-site]").forEach(function (a) {
+          if (t.open) a.setAttribute("href", t.open);
+        });
         ["hero", "seo", "designer", "writer", "analytics", "goal", "build", "step-seo", "report", "handoff"].forEach(function (k) {
           var el = document.querySelector('[data-swap="' + k + '"]');
           if (el && t[k]) fadeImg(el, t[k].src, t[k].alt, instant);
         });
+        if (stage) syncHint(stage);
+
         var prompt = document.querySelector("[data-prompt]");
         if (prompt && prompt.textContent !== t.prompt) {
           var chip = prompt.closest(".prompt-chip");
@@ -511,9 +538,35 @@
           apply(id, true);
         });
       });
+      function syncHint(stage) {
+        if (!stage) return;
+        var atEnd = stage.scrollHeight - stage.scrollTop - stage.clientHeight < 28;
+        var wrap = stage.closest(".hero-stage-wrap") || stage;
+        wrap.classList.toggle("is-at-end", atEnd);
+      }
+      function sizeStage() {
+        var frame = document.querySelector("[data-hero-frame]");
+        var stage = document.querySelector("[data-hero-stage]");
+        if (!frame || !stage) return;
+        var chrome = frame.querySelector(".hero-chrome");
+        var topAtOrigin = frame.getBoundingClientRect().top + (window.scrollY || window.pageYOffset || 0);
+        var chromeH = chrome ? chrome.offsetHeight : 44;
+        var isMob = window.innerWidth <= 640;
+        var pad = isMob ? 8 : 20;
+        var h = Math.round(window.innerHeight - topAtOrigin - chromeH - pad);
+        var minH = isMob ? 240 : 300;
+        stage.style.height = Math.max(minH, h) + "px";
+        syncHint(stage);
+      }
+      var stageEl = document.querySelector("[data-hero-stage]");
+      if (stageEl) {
+        stageEl.addEventListener("scroll", function () { syncHint(stageEl); }, { passive: true });
+      }
+      window.addEventListener("resize", sizeStage);
       window.addEventListener("popstate", function () { apply(fromUrl(), false); });
       window.addEventListener("hashchange", function () { apply(fromUrl(), false); });
       apply(fromUrl(), false);
+      sizeStage();
     })();
   </script>
 </body>
