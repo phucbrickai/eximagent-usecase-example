@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chao Phraya Rice — quote example</title>
+  <link rel="stylesheet" href="quotes.css">
+</head>
+<body class="is-full">
+<div class="pack pack-rice">
+
+  <p class="section-label">Incoming RFQ</p>
+  <div class="card wa">
+    <div class="wa-head">
+      <div class="wa-ava">AH</div>
+      <div>
+        <div class="wa-name">Amir Hassan · Gulf Grain Trading</div>
+        <div class="wa-sub">WhatsApp · Dubai · Today 08:41</div>
+      </div>
+    </div>
+    <div class="wa-bubble">Hi, we need a quote for December:
+
+Thai Hom Mali (jasmine), 1x20ft, 25 MT in 25 kg bags
+CFR Jebel Ali
+Shipment December 2026
+
+Please send FOB too if you have it. Same payment as last time is fine.
+
+Thanks,
+Amir</div>
+    <div class="wa-time">08:41</div>
+  </div>
+
+  <p class="section-label">Costing sheet</p>
+  <div class="card sheet">
+    <div class="sheet-head">
+      <div>
+        <div class="sheet-title">Price ladder — 1×20′ to Jebel Ali</div>
+        <div class="muted" style="margin-top:4px;font-size:13px">Chao Phraya Rice · Thai Hom Mali · 25 MT</div>
+      </div>
+      <div class="sheet-meta">
+        FX: THB 33.00 / USD, less 1% buffer = 32.67<br>
+        Margin 6% of EXW<br>
+        Example data, not market prices
+      </div>
+    </div>
+    <table class="grid">
+      <thead>
+        <tr><th>Line</th><th>Calculation</th><th class="num">USD total</th><th class="num">USD per MT</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Thai Hom Mali</td><td class="sub">25 MT × THB 38,000</td><td class="num">29,078.67</td><td class="num">1,163.15</td></tr>
+        <tr><td>Bags and packing</td><td class="sub">THB 15,000</td><td class="num">459.14</td><td class="num">18.37</td></tr>
+        <tr><td>Goods + bags</td><td class="sub">THB 965,000 ÷ 32.67</td><td class="num">29,537.80</td><td class="num">1,181.51</td></tr>
+        <tr><td>EXW Bangkok</td><td class="sub">÷ (1 − 6% margin)</td><td class="num">31,423.19</td><td class="num">1,256.93</td></tr>
+        <tr><td>Origin costs to FCA</td><td class="sub">Trucking 9,000 + customs 4,500 + phyto and fumigation 3,500 = THB 17,000</td><td class="num">520.36</td><td class="num">20.81</td></tr>
+        <tr><td>FCA</td><td class="sub">EXW + origin costs</td><td class="num">31,943.55</td><td class="num">1,277.74</td></tr>
+        <tr><td>Terminal and on-board</td><td class="sub">THC, B/L, seal USD 170</td><td class="num">170.00</td><td class="num">6.80</td></tr>
+        <tr><td>FOB Laem Chabang</td><td class="sub">FCA + terminal</td><td class="num">32,113.55</td><td class="num">1,284.54</td></tr>
+        <tr><td>Ocean freight</td><td class="sub">USD 1,150, valid to 15 Dec 2026</td><td class="num">1,150.00</td><td class="num">46.00</td></tr>
+        <tr><td>CFR Jebel Ali</td><td class="sub">FOB + freight</td><td class="num">33,263.55</td><td class="num">1,330.54</td></tr>
+        <tr class="quote"><td>Quoted (rounded up)</td><td class="sub">FOB 1,285 · CFR 1,331</td><td class="num">33,275.00</td><td class="num">1,331.00</td></tr>
+      </tbody>
+    </table>
+    <div class="sheet-notes">
+      <div class="note">
+        <strong>Assumptions</strong>
+        Freight USD 1,150 / 20′ valid to 15 Dec 2026, covering a December shipment. Quote valid to 28 Nov 2026.
+      </div>
+      <div class="note">
+        <strong>Checks</strong>
+        <span class="ok">Sanctions clear. Repeat buyer.</span>
+        <span class="ok">Freight validity covers the shipment window.</span>
+        CFR as asked; CPT noted as the container alternative.
+        Payment: 30% T/T advance and 70% CAD at sight, as on the last order.
+      </div>
+    </div>
+  </div>
+
+  <p class="section-label">Quotation</p>
+  <div class="card paper-wrap">
+    <article class="paper rice-paper">
+      <header class="rice-brand">
+        <div class="rice-gold"></div>
+        <div class="rice-head">
+          <div class="rice-mark">
+            <div class="name">Chao Phraya Rice</div>
+            <div class="sub">Bangkok · Thailand</div>
+          </div>
+          <div class="rice-doc-type">
+            <h1>Quotation</h1>
+            <p>Q-2026-1117-22 · 17 Nov 2026</p>
+          </div>
+        </div>
+      </header>
+      <div class="rice-parties">
+        <div>
+          <h2>Seller</h2>
+          Chao Phraya Rice Co., Ltd.<br>
+          Bangkok, Thailand<br>
+          <span class="muted">Example company</span>
+        </div>
+        <div>
+          <h2>Buyer</h2>
+          Gulf Grain Trading LLC<br>
+          Dubai, United Arab Emirates<br>
+          Buyer ref: WhatsApp, 17 Nov 2026, A. Hassan<br>
+          <span class="muted">Example company</span>
+        </div>
+      </div>
+      <table class="rice-table">
+        <thead>
+          <tr><th>Product</th><th>Packing</th><th class="num">Qty</th><th class="num">CFR Jebel Ali<br>Incoterms 2020</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Thai Hom Mali (jasmine rice), 100% Grade A, crop 2026, HS 1006.30, origin Thailand</td>
+            <td>25 kg new PP bags, 1×20′ container</td>
+            <td class="num">25.00 MT<br>(1,000 bags)</td>
+            <td class="num">USD 1,331.00 / MT</td>
+          </tr>
+          <tr class="total"><td colspan="3">Total, +/−5% at seller’s option</td><td class="num">USD 33,275.00</td></tr>
+        </tbody>
+      </table>
+      <div class="rice-terms">
+        <p>Also available: FOB Laem Chabang Incoterms 2020, USD 1,285.00 / MT. For container cargo, CPT Jebel Ali can be used in place of CFR.</p>
+        <p>Payment: 30% T/T advance, 70% CAD at sight, as on previous orders.</p>
+        <p>Shipment: December 2026, Laem Chabang to Jebel Ali. Freight in the CFR price is valid to 15 Dec 2026.</p>
+        <p>Documents: commercial invoice, packing list, B/L, C/O, phytosanitary and fumigation certificates. Destination documents to be confirmed with the buyer and forwarder.</p>
+        <p>Validity: 28 Nov 2026. Not a binding offer until confirmed in a signed contract or proforma invoice.</p>
+      </div>
+      <p class="rice-foot">Example data, not market prices. Bank details are taken from the seller’s records and are not printed here.</p>
+    </article>
+  </div>
+
+  <p class="section-label">Proforma invoice</p>
+  <div class="card paper-wrap">
+    <article class="paper rice-paper">
+      <header class="rice-brand">
+        <div class="rice-gold"></div>
+        <div class="rice-head">
+          <div class="rice-mark">
+            <div class="name">Chao Phraya Rice</div>
+            <div class="sub">Bangkok · Thailand</div>
+          </div>
+          <div class="rice-doc-type">
+            <h1>Proforma invoice</h1>
+            <p>PI-2026-0550 · 17 Nov 2026</p>
+          </div>
+        </div>
+      </header>
+      <div class="rice-parties">
+        <div>
+          <h2>Seller / Beneficiary</h2>
+          Chao Phraya Rice Co., Ltd.<br>
+          Bangkok, Thailand<br>
+          <span class="muted">Example company</span>
+        </div>
+        <div>
+          <h2>Buyer / Applicant</h2>
+          Gulf Grain Trading LLC<br>
+          Dubai, United Arab Emirates<br>
+          Quotation ref: Q-2026-1117-22<br>
+          <span class="muted">Example company</span>
+        </div>
+      </div>
+      <p style="font-size:14px;margin-bottom:12px">Port of loading: Laem Chabang, Thailand. Port of discharge: Jebel Ali, UAE. Latest shipment date: 31 Dec 2026. Incoterm: CFR Jebel Ali Incoterms 2020.</p>
+      <table class="rice-table">
+        <thead>
+          <tr><th>Item</th><th>Description</th><th class="num">Qty</th><th class="num">Unit price</th><th class="num">Amount</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Thai Hom Mali (jasmine rice), 100% Grade A, crop 2026, HS 1006.30</td>
+            <td class="num">25.00 MT</td>
+            <td class="num">USD 1,331.00</td>
+            <td class="num">USD 33,275.00</td>
+          </tr>
+          <tr class="total"><td colspan="4">Total, +/−5% at seller’s option</td><td class="num">USD 33,275.00</td></tr>
+        </tbody>
+      </table>
+      <div class="rice-terms">
+        <p>In words: US Dollars Thirty-Three Thousand Two Hundred Seventy-Five only.</p>
+        <p>Packing: 1,000 new 25 kg PP bags. Net weight 25,000 kg.</p>
+        <p>Payment: 30% T/T advance, 70% cash against documents at sight.</p>
+        <p>Bank details from the seller’s records. Estimated shipping date: December 2026. Validity: 28 Nov 2026.</p>
+      </div>
+      <p class="rice-foot">Example data, not market prices. Signature and company stamp to be applied when you send.</p>
+    </article>
+  </div>
+
+</div>
+</body>
+</html>

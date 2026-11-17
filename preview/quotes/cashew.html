@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phuoc An Cashew — quote example</title>
+  <link rel="stylesheet" href="quotes.css">
+</head>
+<body class="is-full">
+<div class="pack pack-cashew">
+
+  <p class="section-label">Incoming RFQ</p>
+  <div class="card email">
+    <div class="email-bar"><div class="email-dots" aria-hidden="true"><i></i><i></i><i></i></div>Mail</div>
+    <div class="email-body">
+      <div class="email-meta">
+        <div class="k">From</div><div class="v">Pieter de Vries &lt;purchasing@meridiannuts.example&gt;</div>
+        <div class="k">Received</div><div class="v">Tue 17 Nov 2026, 11:04 (UTC+7)</div>
+        <div class="k">Subject</div><div class="v subject">RFQ — W320 cashew kernels — 1×20′ — CFR Rotterdam</div>
+      </div>
+      <div class="email-letter">
+        <p>Dear Sales,</p>
+        <p>Please quote for the following:</p>
+        <ul>
+          <li>Cashew kernels, white whole W320</li>
+          <li>1×20′ ≈ 15 MT (660 cartons × 50 lb)</li>
+          <li>CFR Rotterdam, shipment February 2027</li>
+          <li>Payment: L/C at sight or T/T, please advise</li>
+        </ul>
+        <p>Please include FOB as well. We are a first-time enquiry.</p>
+        <p>Kind regards,<br>Pieter de Vries<br>Meridian Nuts B.V., Rotterdam</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="section-label">Costing sheet</p>
+  <div class="card sheet">
+    <div class="sheet-head">
+      <div>
+        <div class="sheet-title">Price ladder — 1×20′ to Rotterdam</div>
+        <div class="muted" style="margin-top:4px;font-size:13px">Phuoc An Cashew · W320 · 15 MT</div>
+      </div>
+      <div class="sheet-meta">
+        FX: VND 26,300 / USD, less 1% buffer = 26,037<br>
+        Margin 5% of EXW · floor 4% of invoice<br>
+        Example data, not market prices
+      </div>
+    </div>
+    <table class="grid">
+      <thead>
+        <tr><th>Line</th><th>Calculation</th><th class="num">USD total</th><th class="num">USD per MT</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>W320 kernels, purchase</td><td class="sub">15,000 kg × VND 195,000</td><td class="num">112,340.13</td><td class="num">7,489.34</td></tr>
+        <tr><td>Processing, cartons, marking</td><td class="sub">15,000 kg × VND 3,500</td><td class="num">2,016.36</td><td class="num">134.42</td></tr>
+        <tr><td>A. Goods cost</td><td class="sub">Purchase + processing</td><td class="num">114,356.49</td><td class="num">7,623.77</td></tr>
+        <tr><td>EXW</td><td class="sub">A ÷ 0.95</td><td class="num">120,375.25</td><td class="num">8,025.02</td></tr>
+        <tr><td>C. Origin costs to FCA</td><td class="sub">Trucking 249.64 + customs 96.02 + docs 268.85</td><td class="num">614.51</td><td class="num">40.97</td></tr>
+        <tr><td>FCA Cat Lai terminal</td><td class="sub">EXW + C</td><td class="num">120,989.76</td><td class="num">8,065.98</td></tr>
+        <tr><td>D. Terminal and on-board</td><td class="sub">THC, B/L, seal USD 180</td><td class="num">180.00</td><td class="num">12.00</td></tr>
+        <tr><td>FOB Cat Lai</td><td class="sub">FCA + D</td><td class="num">121,169.76</td><td class="num">8,077.98</td></tr>
+        <tr><td>E. Ocean freight</td><td class="sub">Cat Lai → Rotterdam, 20′, valid to 20 Dec 2026</td><td class="num">1,850.00</td><td class="num">123.33</td></tr>
+        <tr><td>CFR Rotterdam</td><td class="sub">FOB + E</td><td class="num">123,019.76</td><td class="num">8,201.32</td></tr>
+        <tr class="quote"><td>Quoted (rounded up per MT)</td><td class="sub">EXW 8,026 · FCA 8,067 · FOB 8,079 · CFR 8,202</td><td class="num">123,030.00</td><td class="num">8,202.00</td></tr>
+      </tbody>
+    </table>
+    <div class="sheet-notes">
+      <div class="note">
+        <strong>Assumptions</strong>
+        Freight USD 1,850 / 20′ valid to 20 Dec 2026. Quote valid to 1 Dec 2026.
+      </div>
+      <div class="note">
+        <strong>Checks</strong>
+        <span class="ok">Sanctions clear.</span> Margin 4.90%, above the 4% floor.
+        <span class="flag">Freight ends 20 Dec, shipment is February.</span>
+        New buyer, first deal: L/C at sight recommended over T/T.
+      </div>
+    </div>
+  </div>
+
+  <p class="section-label">Quotation</p>
+  <div class="card paper-wrap">
+    <article class="paper cashew-paper">
+      <div class="cashew-brand">
+        <div class="name">Phuoc An</div>
+        <div class="sub">Cashew exporter</div>
+      </div>
+      <div class="cashew-rule"></div>
+      <div class="cashew-doc-type">
+        <h1>Quotation</h1>
+        <p>No. Q-2026-1117-14 · 17 Nov 2026</p>
+      </div>
+      <div class="cashew-parties">
+        <div>
+          <h2>Seller</h2>
+          Phuoc An Cashew<br>
+          Viet Nam<br>
+          <span class="muted">Example company</span>
+        </div>
+        <div>
+          <h2>Buyer</h2>
+          Meridian Nuts B.V.<br>
+          Rotterdam, the Netherlands<br>
+          Buyer ref: RFQ 17 Nov 2026, P. de Vries<br>
+          <span class="muted">Example company</span>
+        </div>
+      </div>
+      <div class="cashew-body">
+        <p>Product: cashew kernels, white whole W320, packed for export. HS 0801.32, origin Viet Nam.</p>
+        <p>Quantity: 15 MT (660 cartons × 50 lb), +/−5% at seller’s option. Packing: 50 lb cartons, 1×20′ container.</p>
+        <table class="cashew-prices">
+          <tr class="main"><td>CFR Rotterdam Incoterms 2020</td><td class="num">USD 8,202.00 / MT</td></tr>
+          <tr><td>FOB Cat Lai Incoterms 2020</td><td class="num">USD 8,079.00 / MT</td></tr>
+          <tr><td>Also available: FCA Cat Lai terminal 8,067.00</td><td class="num"></td></tr>
+        </table>
+        <p>Payment: irrevocable L/C at sight, UCP 600, by a bank acceptable to seller.</p>
+        <p>Shipment: February 2027, Cat Lai to Rotterdam. Freight in the CFR price is valid to 20 Dec 2026; difference at booking adjusted at cost.</p>
+        <p>Documents: commercial invoice, packing list, B/L, C/O, phytosanitary and fumigation certificates, health certificate as required.</p>
+        <p>Validity: 1 Dec 2026. Not a binding offer until confirmed in a signed contract or proforma invoice.</p>
+      </div>
+      <p class="cashew-foot">Example data, not market prices. Bank details are taken from the seller’s records and are not printed here.</p>
+    </article>
+  </div>
+
+  <p class="section-label">Proforma invoice</p>
+  <div class="card paper-wrap">
+    <article class="paper cashew-paper">
+      <div class="cashew-brand">
+        <div class="name">Phuoc An</div>
+        <div class="sub">Cashew exporter</div>
+      </div>
+      <div class="cashew-rule"></div>
+      <div class="cashew-doc-type">
+        <h1>Proforma invoice</h1>
+        <p>No. PI-2026-0618 · 17 Nov 2026</p>
+      </div>
+      <div class="cashew-parties">
+        <div>
+          <h2>Beneficiary / Seller</h2>
+          Phuoc An Cashew, Viet Nam<br>
+          <span class="muted">Example company</span>
+        </div>
+        <div>
+          <h2>Applicant / Buyer</h2>
+          Meridian Nuts B.V., Rotterdam<br>
+          Quotation ref: Q-2026-1117-14<br>
+          <span class="muted">Example company</span>
+        </div>
+      </div>
+      <div class="cashew-body">
+        <p>Consignee: to order of issuing bank. Port of loading: Cat Lai, Viet Nam. Port of discharge: Rotterdam, the Netherlands. Latest shipment date: 28 Feb 2027. Incoterm: CFR Rotterdam Incoterms 2020.</p>
+        <table class="cashew-prices">
+          <tr><td>1 · Cashew kernels, white whole W320, HS 0801.32 · 15.00 MT</td><td class="num">USD 8,202.00 / MT</td></tr>
+          <tr class="main"><td>Total (quantity and amount +/−5% at seller’s option)</td><td class="num">USD 123,030.00</td></tr>
+        </table>
+        <p>In words: US Dollars One Hundred Twenty-Three Thousand Thirty only.</p>
+        <p>Packing: 660 cartons × 50 lb net. Payment: irrevocable L/C at sight, UCP 600; documents presented within 21 days after shipment. Bank details from the seller’s records.</p>
+        <p>Estimated shipping date: February 2027. Validity: 1 Dec 2026.</p>
+      </div>
+      <p class="cashew-foot">Example data, not market prices. Signature and company stamp to be applied when you send.</p>
+    </article>
+  </div>
+
+</div>
+</body>
+</html>

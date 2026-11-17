@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lak Highlands Coffee — quote example</title>
+  <link rel="stylesheet" href="quotes.css">
+</head>
+<body class="is-full">
+<div class="pack pack-coffee">
+
+  <p class="section-label">Incoming RFQ</p>
+  <div class="card email">
+    <div class="email-bar"><div class="email-dots" aria-hidden="true"><i></i><i></i><i></i></div>Mail</div>
+    <div class="email-body">
+      <div class="email-meta">
+        <div class="k">From</div><div class="v">Jonas Weber &lt;purchasing@nordkaffee.example&gt;</div>
+        <div class="k">Received</div><div class="v">Tue 17 Nov 2026, 09:12 (UTC+7)</div>
+        <div class="k">Subject</div><div class="v subject">RFQ — Vietnam Robusta G1 S18 — 1×20′ — CIF Hamburg</div>
+      </div>
+      <div class="email-letter">
+        <p>Hello,</p>
+        <p>we are a coffee importer in Hamburg. Please quote:</p>
+        <ul>
+          <li>Vietnam Robusta Grade 1, Screen 18, wet polished</li>
+          <li>Moisture max 12.5%, black &amp; broken max 2%</li>
+          <li>1×20′ = 19.2 MT (320 jute bags × 60 kg)</li>
+          <li>Shipment: January 2027</li>
+          <li>Terms: CIF Hamburg</li>
+          <li>Payment: CAD at sight or L/C at sight</li>
+        </ul>
+        <p>Please also confirm you can provide EUDR data (plot geolocation).</p>
+        <p>Best price by Friday, please.</p>
+        <p>Jonas Weber, Purchasing</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="section-label">Costing sheet</p>
+  <div class="card sheet">
+    <div class="sheet-head">
+      <div>
+        <div class="sheet-title">Price ladder — 1×20′ to Hamburg</div>
+        <div class="muted" style="margin-top:4px;font-size:13px">Lak Highlands Coffee · Robusta G1 S18 · 19.2 MT</div>
+      </div>
+      <div class="sheet-meta">
+        FX: VND 26,300 / USD, less 1% buffer = 26,037<br>
+        Margin 5% of EXW · floor 4% of invoice<br>
+        Example data, not market prices
+      </div>
+    </div>
+    <table class="grid">
+      <thead>
+        <tr><th>Line</th><th>Calculation</th><th class="num">USD total</th><th class="num">USD per MT</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Green coffee purchase</td><td class="sub">19,200 kg × VND 118,000</td><td class="num">87,014.63</td><td class="num">4,532.01</td></tr>
+        <tr><td>Sorting, polishing, bags, marking</td><td class="sub">19,200 kg × VND 2,000</td><td class="num">1,474.82</td><td class="num">76.81</td></tr>
+        <tr><td>A. Goods cost</td><td class="sub">Purchase + processing</td><td class="num">88,489.46</td><td class="num">4,608.83</td></tr>
+        <tr><td>B. Margin</td><td class="sub">A ÷ (1 − 5%) − A</td><td class="num">4,657.34</td><td class="num">242.57</td></tr>
+        <tr><td>EXW Buon Ma Thuot</td><td class="sub">A ÷ 0.95</td><td class="num">93,146.80</td><td class="num">4,851.40</td></tr>
+        <tr><td>C. Origin costs to FCA</td><td class="sub">Trucking 230.44 + customs 96.02 + docs 249.64</td><td class="num">576.10</td><td class="num">30.01</td></tr>
+        <tr><td>FCA Cat Lai terminal</td><td class="sub">EXW + C</td><td class="num">93,722.90</td><td class="num">4,881.40</td></tr>
+        <tr><td>D. Terminal and on-board</td><td class="sub">THC 130 + B/L 40 + seal 10</td><td class="num">180.00</td><td class="num">9.38</td></tr>
+        <tr><td>FOB Cat Lai</td><td class="sub">FCA + D</td><td class="num">93,902.90</td><td class="num">4,890.78</td></tr>
+        <tr><td>E. Ocean freight</td><td class="sub">Forwarder A, valid to 30 Nov 2026</td><td class="num">2,150.00</td><td class="num">111.98</td></tr>
+        <tr><td>CFR Hamburg</td><td class="sub">FOB + E</td><td class="num">96,052.90</td><td class="num">5,002.76</td></tr>
+        <tr><td>CIF Hamburg</td><td class="sub">CFR ÷ (1 − 1.1 × 0.15%)</td><td class="num">96,211.65</td><td class="num">5,011.02</td></tr>
+        <tr class="quote"><td>Quoted (rounded up per MT)</td><td class="sub">EXW 4,852 · FCA 4,882 · FOB 4,891 · CFR 5,003 · CIF 5,012</td><td class="num">96,230.40</td><td class="num">5,012.00</td></tr>
+      </tbody>
+    </table>
+    <div class="sheet-notes">
+      <div class="note">
+        <strong>Assumptions</strong>
+        Freight USD 2,150 / 20′ valid to 30 Nov 2026. Insurance ICC (C) at 110%. Quote valid to 24 Nov 2026.
+      </div>
+      <div class="note">
+        <strong>Checks</strong>
+        <span class="ok">Sanctions clear.</span> Margin 4.86%, above the 4% floor.
+        <span class="flag">Freight ends 30 Nov, shipment is January.</span>
+        <span class="flag">CIF asked for a container — FCA Cat Lai offered as well.</span>
+        <span class="flag">EUDR applies (arrival after 30 Dec 2026).</span>
+        New buyer: L/C at sight recommended.
+      </div>
+    </div>
+  </div>
+
+  <p class="section-label">Quotation</p>
+  <div class="card paper-wrap">
+    <article class="paper coffee-paper">
+      <header class="coffee-brand">
+        <div class="coffee-mark">
+          <div class="name">Lak Highlands</div>
+          <div class="sub">Coffee · Buon Ma Thuot</div>
+        </div>
+        <div class="coffee-doc-type">
+          <h1>Quotation</h1>
+          <p>No. Q-2026-1117-01<br>17 Nov 2026</p>
+        </div>
+      </header>
+      <div class="coffee-parties">
+        <div>
+          <h2>Seller</h2>
+          Lak Highlands Coffee Co.<br>
+          Buon Ma Thuot, Viet Nam<br>
+          <span class="muted">Example company</span>
+        </div>
+        <div>
+          <h2>Buyer</h2>
+          Nordkaffee Import GmbH<br>
+          Hamburg, Germany<br>
+          Buyer ref: RFQ 17 Nov 2026, J. Weber<br>
+          <span class="muted">Example company</span>
+        </div>
+      </div>
+      <div class="coffee-body">
+        <h3>Product</h3>
+        <p>Vietnam Robusta Grade 1, Screen 18, wet polished. Moisture max 12.5%, black &amp; broken max 2%, crop 2026/27. HS 0901.11, origin Viet Nam.</p>
+        <p>Quantity: 19.2 MT (320 jute bags × 60 kg), +/−5% at seller’s option. Packing: new jute bags, 1×20′ dry container.</p>
+        <h3>Prices (USD per MT)</h3>
+        <table class="coffee-prices">
+          <tr class="main"><td>CIF Hamburg Incoterms 2020</td><td class="num">5,012.00</td></tr>
+          <tr><td>FCA Cat Lai container terminal Incoterms 2020</td><td class="num">4,882.00</td></tr>
+          <tr><td>Also available: FOB Cat Lai 4,891.00 · CFR Hamburg 5,003.00</td><td class="num"></td></tr>
+        </table>
+        <p>Insurance (CIF): 110% of invoice value, ICC (C); ICC (A) on request.</p>
+        <p>Freight basis: USD 2,150 per 20′ valid to 30 Nov 2026; difference at booking adjusted at cost.</p>
+        <p>Payment: irrevocable L/C at sight, UCP 600, by a bank acceptable to seller.</p>
+        <p>Shipment: January 2027, Cat Lai to Hamburg.</p>
+        <p>Documents: commercial invoice, packing/weight list, full set clean on-board B/L, insurance certificate, C/O, phytosanitary and fumigation certificates, EUDR geolocation data.</p>
+        <p>Validity: 24 Nov 2026. Not a binding offer until confirmed in a signed contract or proforma invoice.</p>
+      </div>
+      <p class="coffee-foot">Example data, not market prices. Bank details are taken from the seller’s records and are not printed here.</p>
+    </article>
+  </div>
+
+  <p class="section-label">Proforma invoice</p>
+  <div class="card paper-wrap">
+    <article class="paper coffee-paper">
+      <header class="coffee-brand">
+        <div class="coffee-mark">
+          <div class="name">Lak Highlands</div>
+          <div class="sub">Coffee · Buon Ma Thuot</div>
+        </div>
+        <div class="coffee-doc-type">
+          <h1>Proforma invoice</h1>
+          <p>No. PI-2026-0412<br>17 Nov 2026</p>
+        </div>
+      </header>
+      <div class="coffee-parties">
+        <div>
+          <h2>Beneficiary / Seller</h2>
+          Lak Highlands Coffee Co.<br>
+          Buon Ma Thuot, Viet Nam<br>
+          <span class="muted">Example company</span>
+        </div>
+        <div>
+          <h2>Applicant / Buyer</h2>
+          Nordkaffee Import GmbH<br>
+          Hamburg, Germany<br>
+          Buyer ref: RFQ 17 Nov 2026<br>
+          Quotation ref: Q-2026-1117-01<br>
+          <span class="muted">Example company</span>
+        </div>
+      </div>
+      <div class="coffee-body">
+        <p>Consignee: to order of issuing bank. Notify: applicant.<br>
+        Port of loading: Cat Lai, Ho Chi Minh City, Viet Nam.<br>
+        Port of discharge: Hamburg, Germany.<br>
+        Latest shipment date: 31 Jan 2027. Partial shipment: not allowed.<br>
+        Incoterm: CIF Hamburg Incoterms 2020.</p>
+        <table class="coffee-prices">
+          <tr><td>1 · Vietnam Robusta Grade 1, Screen 18, wet polished, crop 2026/27, HS 0901.11 · 19.2 MT</td><td class="num">USD 5,012.00 / MT</td></tr>
+          <tr class="main"><td>Total (quantity and amount +/−5% at seller’s option)</td><td class="num">USD 96,230.40</td></tr>
+        </table>
+        <p>In words: US Dollars Ninety-Six Thousand Two Hundred Thirty and Forty Cents.</p>
+        <p>Packing: 320 new jute bags × 60 kg net; gross weight approx. 19,450 kg.</p>
+        <p>Insurance: 110% of invoice value (USD 105,853.44), ICC (C).</p>
+        <p>Payment: irrevocable L/C at sight, UCP 600, to be opened by 15 Dec 2026; documents presented within 21 days after shipment.</p>
+        <p>Documents: as listed in quotation Q-2026-1117-01. Bank details from the seller’s records.</p>
+        <p>Estimated shipping date: January 2027. Validity: 24 Nov 2026.</p>
+      </div>
+      <p class="coffee-foot">Example data, not market prices. Signature and company stamp to be applied when you send.</p>
+    </article>
+  </div>
+
+</div>
+</body>
+</html>

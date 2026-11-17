@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Export quotes &amp; proforma invoices · EximAgent Academy</title>
+  <link rel="icon" href="images/eximagent-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="export-quotes">
+  <header class="site-header">
+    <div class="bar">
+      <a class="brand" href="index.html">
+        <img src="images/eximagent-mark.svg" alt="">
+        <span class="word">EximAgent <span>Academy</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="https://eximagent.ai/agents">Agents</a>
+        <a href="https://eximagent.ai/platform">Platform</a>
+        <a href="https://eximagent.ai/about">About</a>
+        <a href="https://eximagent.ai/cli">CLI</a>
+        <a href="https://eximagent.ai/connectors">Connectors</a>
+        <a href="https://eximagent.ai/resources">Resources</a>
+        <a href="https://eximagent.ai/pricing">Pricing</a>
+      </nav>
+      <div class="header-actions">
+        <a class="btn btn-outline btn-md" href="https://eximagent.ai/">Contact us</a>
+        <a class="btn btn-primary btn-md" href="https://eximagent.ai/">Try EximAgent</a>
+      </div>
+    </div>
+  </header>
+  <div class="subnav">
+    <div class="row">
+      <nav aria-label="Academy">
+        <a href="#">Courses</a>
+        <a class="active" href="index.html" aria-current="page">Use cases</a>
+        <a href="#">Glossary</a>
+        <a href="#">Guides</a>
+        <a href="#">My learning</a>
+      </nav>
+    </div>
+  </div>
+
+  <main>
+    <div class="container">
+      <header class="page-head page-head-compact">
+        <ol class="crumbs">
+          <li><a href="index.html">Academy</a></li>
+          <li class="sep" aria-hidden="true">›</li>
+          <li><a href="index.html">Use cases</a></li>
+          <li class="sep" aria-hidden="true">›</li>
+          <li>Export quotes &amp; proforma invoices</li>
+        </ol>
+        <h1>Hire a team to prepare export quotes</h1>
+        <p class="lead">They read the RFQ, build the price, and draft the quote and proforma invoice.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" id="start" href="https://eximagent.ai/">Build your quoting team</a>
+        </div>
+      </header>
+
+      <div class="template-lib" data-template-lib>
+        <p class="template-lib-label">Same team, different deals. Pick one to see it.</p>
+        <div class="template-switcher" role="group" aria-label="Example deals">
+          <a class="tpl" href="?template=coffee" data-template="coffee" aria-pressed="true">
+            <img src="images/products/thumb-coffee.jpg" alt="">
+            <span>Coffee</span>
+          </a>
+          <a class="tpl" href="?template=rice" data-template="rice" aria-pressed="false">
+            <img src="images/products/thumb-rice.jpg" alt="">
+            <span>Rice</span>
+          </a>
+          <a class="tpl" href="?template=cashew" data-template="cashew" aria-pressed="false">
+            <img src="images/products/thumb-cashew.jpg" alt="">
+            <span>Cashew</span>
+          </a>
+          <a class="tpl" href="?template=spice" data-template="spice" aria-pressed="false">
+            <img src="images/products/thumb-spice.jpg" alt="">
+            <span>Spice</span>
+          </a>
+          <a class="tpl tpl-yours" href="https://eximagent.ai/">
+            <span class="plus" aria-hidden="true">+</span>
+            <span>Your product</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="prompt-chip prompt-chip-inline"><span class="dot">+</span> <span data-prompt>Prepare a CIF Hamburg quote for 1×20′ Vietnam robusta</span></div>
+      <p class="example-note">Example deals with made-up prices.</p>
+      <div class="frame hero-visual hero-browser" data-hero-frame>
+        <div class="hero-chrome">
+          <div class="hero-dots" aria-hidden="true"><i></i><i></i><i></i></div>
+          <div class="hero-url" data-hero-url>Q-2026-1117-01.pdf</div>
+          <a class="hero-open" data-open-site href="preview/quotes/coffee.html" target="_blank" rel="noopener">Open full example</a>
+        </div>
+        <div class="hero-stage-wrap">
+          <div class="hero-stage" data-hero-stage tabindex="0" role="region" aria-label="Scrollable preview of the quote, costing sheet, and proforma invoice">
+            <div class="swap" data-swap="hero">
+              <img class="is-current" src="images/templates/quotes-coffee/pack-full.jpg" alt="Example RFQ, costing sheet, quotation, and proforma invoice for a Vietnam robusta shipment to Hamburg. Scroll to see every document.">
+              <img class="is-next" alt="" aria-hidden="true">
+            </div>
+          </div>
+          <div class="hero-scroll-hint" data-scroll-hint><span>Scroll to see the full example</span></div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="team">
+      <div class="container">
+        <h2>Meet the team</h2>
+        <p class="section-lead">Sales, Trade-Ops, and Analyst, sharing one company brain.</p>
+        <div class="agent-grid">
+          <article class="agent-card">
+            <div class="frame">
+              <div class="swap" data-swap="sales">
+                <img class="is-current" src="images/templates/quotes-coffee/agent-sales.jpg" alt="Sales reading a Hamburg robusta RFQ and building the price from costs on file.">
+                <img class="is-next" alt="" aria-hidden="true">
+              </div>
+            </div>
+            <div class="body">
+              <h3>Sales</h3>
+              <p>Reads the RFQ, pulls your costs, and drafts the quote and PI.</p>
+            </div>
+          </article>
+          <article class="agent-card">
+            <div class="frame">
+              <div class="swap" data-swap="tradeops">
+                <img class="is-current" src="images/templates/quotes-coffee/agent-tradeops.jpg" alt="Trade-Ops checking the Hamburg freight rate and flagging that it expires before a January shipment.">
+                <img class="is-next" alt="" aria-hidden="true">
+              </div>
+            </div>
+            <div class="body">
+              <h3>Trade-Ops</h3>
+              <p>Gets freight rates, checks documents, and flags market rules.</p>
+            </div>
+          </article>
+          <article class="agent-card">
+            <div class="frame">
+              <div class="swap" data-swap="analyst">
+                <img class="is-current" src="images/templates/quotes-coffee/agent-analyst.jpg" alt="Analyst screening Nordkaffee Import in Germany, with the sanctions check marked clear.">
+                <img class="is-next" alt="" aria-hidden="true">
+              </div>
+            </div>
+            <div class="body">
+              <h3>Analyst</h3>
+              <p>Screens the buyer and records the checks on the deal.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="together">
+      <div class="container">
+        <h2>How they work together</h2>
+        <p class="section-lead">From the RFQ to a quote you can send.</p>
+
+        <div class="gallery" data-gallery tabindex="0" aria-roledescription="carousel" aria-label="How the quoting team works together">
+          <div class="gallery-toolbar">
+            <div class="gallery-dots" role="tablist" aria-label="Steps">
+              <button type="button" class="gallery-dot" aria-label="Go to step 1, The RFQ arrives" aria-current="true"></button>
+              <button type="button" class="gallery-dot" aria-label="Go to step 2, Sales reads it and pulls your costs"></button>
+              <button type="button" class="gallery-dot" aria-label="Go to step 3, Trade-Ops gets freight and checks the rules"></button>
+              <button type="button" class="gallery-dot" aria-label="Go to step 4, The team drafts the quote and PI"></button>
+              <button type="button" class="gallery-dot" aria-label="Go to step 5, You review, send, and get a reminder"></button>
+            </div>
+            <div class="gallery-arrows">
+              <button type="button" class="gallery-btn gallery-prev" aria-label="Previous step" disabled>
+                <span aria-hidden="true">←</span>
+              </button>
+              <button type="button" class="gallery-btn gallery-next" aria-label="Next step">
+                <span aria-hidden="true">→</span>
+              </button>
+            </div>
+          </div>
+          <div class="gallery-track">
+            <article class="gallery-slide">
+              <div class="gallery-copy">
+                <p class="step-num">1</p>
+                <h3>The RFQ arrives</h3>
+                <p>A buyer writes by email or WhatsApp, asking for a price and terms.</p>
+              </div>
+              <div class="gallery-media swap" data-swap="rfq">
+                <img class="is-current" src="images/templates/quotes-coffee/step-rfq.jpg" alt="An inbox with a new RFQ from Nordkaffee in Hamburg for Vietnam robusta, CIF, one 20-foot container.">
+                <img class="is-next" alt="" aria-hidden="true">
+              </div>
+            </article>
+            <article class="gallery-slide">
+              <div class="gallery-copy">
+                <p class="step-num">2</p>
+                <h3>Sales reads it and pulls your costs</h3>
+                <p>The RFQ is turned into a deal card, and costs come from your price list.</p>
+              </div>
+              <div class="gallery-media swap" data-swap="costs">
+                <img class="is-current" src="images/templates/quotes-coffee/step-costs.jpg" alt="Sales matching the robusta RFQ to green-coffee and packing costs on file.">
+                <img class="is-next" alt="" aria-hidden="true">
+              </div>
+            </article>
+            <article class="gallery-slide">
+              <div class="gallery-copy">
+                <p class="step-num">3</p>
+                <h3>Trade-Ops checks freight and the buyer</h3>
+                <p>Rates, validity, market rules, and the buyer check are added to the deal.</p>
+              </div>
+              <div class="gallery-media swap" data-swap="ops">
+                <img class="is-current" src="images/templates/quotes-coffee/step-ops.jpg" alt="Trade-Ops and Analyst reviewing the Hamburg freight rate, an EUDR flag, and a clear buyer screen.">
+                <img class="is-next" alt="" aria-hidden="true">
+              </div>
+            </article>
+            <article class="gallery-slide">
+              <div class="gallery-copy">
+                <p class="step-num">4</p>
+                <h3>They draft the quote and PI</h3>
+                <p>A price ladder, quotation, and proforma invoice are ready for you to read.</p>
+              </div>
+              <div class="gallery-media swap" data-swap="drafts">
+                <img class="is-current" src="images/templates/quotes-coffee/step-drafts.jpg" alt="A draft quotation and proforma invoice for CIF Hamburg at 5,012 dollars per metric ton.">
+                <img class="is-next" alt="" aria-hidden="true">
+              </div>
+            </article>
+            <article class="gallery-slide">
+              <div class="gallery-copy">
+                <p class="step-num">5</p>
+                <h3>You check the price and terms, then send</h3>
+                <p>A reminder is set for two days before the quote expires.</p>
+              </div>
+              <div class="gallery-media swap" data-swap="send">
+                <img class="is-current" src="images/templates/quotes-coffee/step-send.jpg" alt="A review screen showing the CIF price, L/C terms, and a Send quote and PI action, with a follow-up reminder before the quote ends.">
+                <img class="is-next" alt="" aria-hidden="true">
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <h2>Questions</h2>
+        <div class="faq">
+          <details>
+            <summary>Which Incoterms can they quote?</summary>
+            <p>They quote the term the buyer asked for, written with a named place and Incoterms 2020. For container shipments they can also add FCA, CPT, or CIP as an alternative.</p>
+          </details>
+          <details>
+            <summary>Where do the costs come from?</summary>
+            <p>From your price list, cost sheet, and the freight rates you have on file, plus an exchange-rate buffer you set.</p>
+          </details>
+          <details>
+            <summary>What if the freight rate expires before shipment?</summary>
+            <p>Trade-Ops flags it on the costing sheet and the draft, so you can ask for a new rate or add a freight-adjustment line before you send.</p>
+          </details>
+          <details>
+            <summary>Can it make a proforma invoice?</summary>
+            <p>Yes. The team drafts a PI with the same figures as the quote, including packing, payment wording, and bank details from your records.</p>
+          </details>
+          <details>
+            <summary>Does it work for my product?</summary>
+            <p>Yes. The examples are coffee, rice, cashew, and spices, and the same team can quote other products from your costs and freight rates — including seafood, furniture, and garments.</p>
+          </details>
+          <details>
+            <summary>Who sends the quote?</summary>
+            <p>You do. You check the price and terms, then send the email, quote, and PI.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <div class="container">
+      <section class="close-cta">
+        <h2>Build your quoting team with EximAgent</h2>
+        <a class="composer" href="https://eximagent.ai/">Build your quoting team <span class="go" aria-hidden="true">→</span></a>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="legal">
+      <a href="index.html">All use cases</a>
+      <span>Quote images are illustrative. Prices are example data.</span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.querySelector("[data-gallery]");
+      if (!root) return;
+      var track = root.querySelector(".gallery-track");
+      var slides = root.querySelectorAll(".gallery-slide");
+      var prev = root.querySelector(".gallery-prev");
+      var next = root.querySelector(".gallery-next");
+      var dots = root.querySelectorAll(".gallery-dot");
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      function index() {
+        var w = track.clientWidth;
+        if (!w) return 0;
+        return Math.round(track.scrollLeft / w);
+      }
+      function go(i) {
+        i = Math.max(0, Math.min(slides.length - 1, i));
+        track.scrollTo({ left: i * track.clientWidth, behavior: reduce ? "auto" : "smooth" });
+      }
+      function sync() {
+        var i = index();
+        dots.forEach(function (d, n) {
+          d.setAttribute("aria-current", n === i ? "true" : "false");
+        });
+        prev.disabled = i <= 0;
+        next.disabled = i >= slides.length - 1;
+      }
+
+      prev.addEventListener("click", function () { go(index() - 1); });
+      next.addEventListener("click", function () { go(index() + 1); });
+      dots.forEach(function (d, n) {
+        d.addEventListener("click", function () { go(n); });
+      });
+      track.addEventListener("scroll", function () { requestAnimationFrame(sync); }, { passive: true });
+      root.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowRight") { e.preventDefault(); go(index() + 1); }
+        if (e.key === "ArrowLeft") { e.preventDefault(); go(index() - 1); }
+      });
+      window.addEventListener("resize", function () { go(index()); });
+      sync();
+    })();
+
+    (function () {
+      var DEFAULT = "coffee";
+      function pack(slug, parts) {
+        var p = "images/templates/quotes-" + slug + "/";
+        return {
+          prompt: parts.prompt,
+          url: parts.url,
+          open: "preview/quotes/" + slug + ".html",
+          hero: { src: p + "pack-full.jpg", alt: parts.hero },
+          sales: { src: p + "agent-sales.jpg", alt: parts.sales },
+          tradeops: { src: p + "agent-tradeops.jpg", alt: parts.tradeops },
+          analyst: { src: p + "agent-analyst.jpg", alt: parts.analyst },
+          rfq: { src: p + "step-rfq.jpg", alt: parts.rfq },
+          costs: { src: p + "step-costs.jpg", alt: parts.costs },
+          ops: { src: p + "step-ops.jpg", alt: parts.ops },
+          drafts: { src: p + "step-drafts.jpg", alt: parts.drafts },
+          send: { src: p + "step-send.jpg", alt: parts.send }
+        };
+      }
+      var TEMPLATES = {
+        coffee: pack("coffee", {
+          prompt: "Prepare a CIF Hamburg quote for 1×20′ Vietnam robusta",
+          url: "Q-2026-1117-01.pdf",
+          hero: "Example RFQ, costing sheet, quotation, and proforma invoice for a Vietnam robusta shipment to Hamburg. Scroll to see every document.",
+          sales: "Sales reading a Hamburg robusta RFQ and building the price from costs on file.",
+          tradeops: "Trade-Ops checking the Hamburg freight rate and flagging that it expires before a January shipment.",
+          analyst: "Analyst screening Nordkaffee Import in Germany, with the sanctions check marked clear.",
+          rfq: "An inbox with a new RFQ from Nordkaffee in Hamburg for Vietnam robusta, CIF, one 20-foot container.",
+          costs: "Sales matching the robusta RFQ to green-coffee and packing costs on file.",
+          ops: "Trade-Ops and Analyst reviewing the Hamburg freight rate, an EUDR flag, and a clear buyer screen.",
+          drafts: "A draft quotation and proforma invoice for CIF Hamburg at 5,012 dollars per metric ton.",
+          send: "A review screen showing the CIF price, L/C terms, and a Send quote and PI action, with a follow-up reminder before the quote ends."
+        }),
+        rice: pack("rice", {
+          prompt: "Prepare a CFR Jebel Ali quote for 25 MT Thai jasmine rice",
+          url: "Q-2026-1117-22.pdf",
+          hero: "Example WhatsApp RFQ, costing sheet, quotation, and proforma invoice for Thai jasmine rice to Jebel Ali. Scroll to see every document.",
+          sales: "Sales reading a Dubai rice RFQ and building the price from costs on file.",
+          tradeops: "Trade-Ops checking the Jebel Ali freight rate, which covers the December shipment.",
+          analyst: "Analyst screening Gulf Grain Trading in the UAE, marked as a repeat buyer with a clear check.",
+          rfq: "A WhatsApp message from Amir Hassan at Gulf Grain Trading asking for 25 MT of Thai jasmine rice, CFR Jebel Ali.",
+          costs: "Sales matching the rice RFQ to Thai Hom Mali and packing costs on file.",
+          ops: "Trade-Ops reviewing a freight rate valid through December and a clear buyer screen.",
+          drafts: "A draft quotation and proforma invoice for CFR Jebel Ali at 1,331 dollars per metric ton.",
+          send: "A review screen showing the CFR price, payment terms, and a Send quote and PI action, with a follow-up reminder before the quote ends."
+        }),
+        cashew: pack("cashew", {
+          prompt: "Prepare a CFR Rotterdam quote for 15 MT W320 cashew",
+          url: "Q-2026-1117-14.pdf",
+          hero: "Example RFQ, costing sheet, quotation, and proforma invoice for W320 cashew kernels to Rotterdam. Scroll to see every document.",
+          sales: "Sales reading a Rotterdam cashew RFQ and building the price from costs on file.",
+          tradeops: "Trade-Ops checking the Rotterdam freight rate and flagging that it expires before a February shipment.",
+          analyst: "Analyst screening Meridian Nuts in the Netherlands, with the sanctions check marked clear.",
+          rfq: "An inbox with a new RFQ from Meridian Nuts in Rotterdam for W320 cashew kernels, CFR, one 20-foot container.",
+          costs: "Sales matching the cashew RFQ to W320 and packing costs on file.",
+          ops: "Trade-Ops and Analyst reviewing the Rotterdam freight rate, a new-buyer note, and a clear screen.",
+          drafts: "A draft quotation and proforma invoice for CFR Rotterdam at 8,202 dollars per metric ton.",
+          send: "A review screen showing the CFR price, L/C terms, and a Send quote and PI action, with a follow-up reminder before the quote ends."
+        }),
+        spice: pack("spice", {
+          prompt: "Prepare an FOB Cat Lai quote for 16 MT black pepper",
+          url: "Q-2026-1117-31.pdf",
+          hero: "Example RFQ, costing sheet, quotation, and proforma invoice for ASTA black pepper, FOB Cat Lai. Scroll to see every document.",
+          sales: "Sales reading a Copenhagen pepper RFQ and building the price from costs on file.",
+          tradeops: "Trade-Ops checking the Rotterdam freight rate and flagging that it expires before a March shipment.",
+          analyst: "Analyst screening Nordisk Krydderi in Denmark, with the sanctions check marked clear.",
+          rfq: "An inbox with a new RFQ from Nordisk Krydderi in Copenhagen for ASTA black pepper, FOB Cat Lai.",
+          costs: "Sales matching the pepper RFQ to purchase and ASTA packing costs on file.",
+          ops: "Trade-Ops reviewing a freight-validity flag and a note that EU official controls may apply.",
+          drafts: "A draft quotation and proforma invoice for FOB Cat Lai at 6,085 dollars per metric ton.",
+          send: "A review screen showing the FOB price, payment terms, and a Send quote and PI action, with a follow-up reminder before the quote ends."
+        })
+      };
+
+      function fromUrl() {
+        var q = new URLSearchParams(window.location.search).get("template");
+        if (q && TEMPLATES[q]) return q;
+        var h = (window.location.hash || "").replace(/^#/, "");
+        if (h && TEMPLATES[h]) return h;
+        return DEFAULT;
+      }
+
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var current = DEFAULT;
+
+      function swapImg(key, item) {
+        var root = document.querySelector('[data-swap="' + key + '"]');
+        if (!root || !item) return;
+        var cur = root.querySelector("img.is-current");
+        var next = root.querySelector("img.is-next");
+        if (!cur) return;
+        if (cur.getAttribute("src") === item.src) {
+          cur.setAttribute("alt", item.alt);
+          return;
+        }
+        if (reduce || !next) {
+          cur.setAttribute("src", item.src);
+          cur.setAttribute("alt", item.alt);
+          return;
+        }
+        next.setAttribute("src", item.src);
+        next.setAttribute("alt", item.alt);
+        next.removeAttribute("aria-hidden");
+        root.classList.add("is-animate");
+        var done = function () {
+          cur.setAttribute("src", item.src);
+          cur.setAttribute("alt", item.alt);
+          next.setAttribute("src", "");
+          next.setAttribute("alt", "");
+          next.setAttribute("aria-hidden", "true");
+          root.classList.remove("is-animate");
+        };
+        window.setTimeout(done, 280);
+      }
+
+      function apply(id, push) {
+        if (!TEMPLATES[id]) id = DEFAULT;
+        var t = TEMPLATES[id];
+        current = id;
+        document.querySelectorAll("[data-template]").forEach(function (el) {
+          el.setAttribute("aria-pressed", el.getAttribute("data-template") === id ? "true" : "false");
+        });
+        var prompt = document.querySelector("[data-prompt]");
+        if (prompt) {
+          var chip = prompt.closest(".prompt-chip");
+          if (chip && !reduce) chip.classList.add("is-fade");
+          window.setTimeout(function () {
+            prompt.textContent = t.prompt;
+            if (chip) chip.classList.remove("is-fade");
+          }, reduce ? 0 : 120);
+        }
+        swapImg("hero", t.hero);
+        swapImg("sales", t.sales);
+        swapImg("tradeops", t.tradeops);
+        swapImg("analyst", t.analyst);
+        swapImg("rfq", t.rfq);
+        swapImg("costs", t.costs);
+        swapImg("ops", t.ops);
+        swapImg("drafts", t.drafts);
+        swapImg("send", t.send);
+        var urlEl = document.querySelector("[data-hero-url]");
+        if (urlEl) urlEl.textContent = t.url;
+        document.querySelectorAll("[data-open-site]").forEach(function (a) { a.setAttribute("href", t.open); });
+        var stage = document.querySelector("[data-hero-stage]");
+        if (stage) stage.scrollTop = 0;
+        if (stage) syncHint(stage);
+        if (push) {
+          var url = "?template=" + id;
+          if (window.location.search + window.location.hash !== url) {
+            history.pushState({ template: id }, "", url);
+          }
+        }
+      }
+
+      document.querySelectorAll("[data-template]").forEach(function (b) {
+        b.addEventListener("click", function (e) {
+          var id = b.getAttribute("data-template");
+          if (!TEMPLATES[id]) return;
+          e.preventDefault();
+          apply(id, true);
+        });
+      });
+
+      function syncHint(stage) {
+        if (!stage) return;
+        var atEnd = stage.scrollHeight - stage.scrollTop - stage.clientHeight < 28;
+        var wrap = stage.closest(".hero-stage-wrap") || stage;
+        wrap.classList.toggle("is-at-end", atEnd);
+      }
+      function sizeStage() {
+        var frame = document.querySelector("[data-hero-frame]");
+        var stage = document.querySelector("[data-hero-stage]");
+        if (!frame || !stage) return;
+        var chrome = frame.querySelector(".hero-chrome");
+        var topAtOrigin = frame.getBoundingClientRect().top + (window.scrollY || window.pageYOffset || 0);
+        var chromeH = chrome ? chrome.offsetHeight : 44;
+        var isMob = window.innerWidth <= 640;
+        var pad = isMob ? 8 : 20;
+        var h = Math.round(window.innerHeight - topAtOrigin - chromeH - pad);
+        var minH = isMob ? 200 : 300;
+        stage.style.height = Math.max(minH, h) + "px";
+        syncHint(stage);
+      }
+      var stageEl = document.querySelector("[data-hero-stage]");
+      if (stageEl) {
+        stageEl.addEventListener("scroll", function () { syncHint(stageEl); }, { passive: true });
+      }
+      window.addEventListener("resize", sizeStage);
+      window.addEventListener("popstate", function () { apply(fromUrl(), false); });
+      window.addEventListener("hashchange", function () { apply(fromUrl(), false); });
+      apply(fromUrl(), false);
+      sizeStage();
+    })();
+  </script>
+</body>
+</html>

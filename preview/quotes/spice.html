@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Red Sail Spice — quote example</title>
+  <link rel="stylesheet" href="quotes.css">
+</head>
+<body class="is-full">
+<div class="pack pack-spice">
+
+  <p class="section-label">Incoming RFQ</p>
+  <div class="card email">
+    <div class="email-bar"><div class="email-dots" aria-hidden="true"><i></i><i></i><i></i></div>Mail</div>
+    <div class="email-body">
+      <div class="email-meta">
+        <div class="k">From</div><div class="v">Astrid Holm &lt;procurement@nordiskkrydderi.example&gt;</div>
+        <div class="k">Received</div><div class="v">Tue 17 Nov 2026, 14:22 (UTC+7)</div>
+        <div class="k">Subject</div><div class="v subject">RFQ — black pepper ASTA — 1×20′ — FOB Cat Lai</div>
+      </div>
+      <div class="email-letter">
+        <p>Hello,</p>
+        <p>Please quote FOB Cat Lai for:</p>
+        <ul>
+          <li>Black pepper, ASTA quality, 550 g/l min</li>
+          <li>1×20′ = 16 MT, 25 kg bags</li>
+          <li>Shipment: March 2027</li>
+          <li>Payment: 30% T/T and 70% against B/L copy, or L/C if you prefer</li>
+        </ul>
+        <p>CFR Rotterdam would also be useful as a reference.</p>
+        <p>Best regards,<br>Astrid Holm<br>Nordisk Krydderi A/S, Copenhagen</p>
+      </div>
+    </div>
+  </div>
+
+  <p class="section-label">Costing sheet</p>
+  <div class="card sheet">
+    <div class="sheet-head">
+      <div>
+        <div class="sheet-title">Price ladder — 1×20′ black pepper</div>
+        <div class="muted" style="margin-top:4px;font-size:13px">Red Sail Spice · ASTA black pepper · 16 MT</div>
+      </div>
+      <div class="sheet-meta">
+        FX: VND 26,300 / USD, less 1% buffer = 26,037<br>
+        Margin 6% of EXW · floor 5% of invoice<br>
+        Example data, not market prices
+      </div>
+    </div>
+    <table class="grid">
+      <thead>
+        <tr><th>Line</th><th>Calculation</th><th class="num">USD total</th><th class="num">USD per MT</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Black pepper, purchase</td><td class="sub">16,000 kg × VND 145,000</td><td class="num">89,103.97</td><td class="num">5,569.00</td></tr>
+        <tr><td>Cleaning, ASTA packing, bags</td><td class="sub">16,000 kg × VND 2,800</td><td class="num">1,720.63</td><td class="num">107.54</td></tr>
+        <tr><td>A. Goods cost</td><td class="sub">Purchase + processing</td><td class="num">90,824.60</td><td class="num">5,676.54</td></tr>
+        <tr><td>EXW</td><td class="sub">A ÷ 0.94</td><td class="num">96,621.91</td><td class="num">6,038.87</td></tr>
+        <tr><td>C. Origin costs to FCA</td><td class="sub">Trucking 222.76 + customs 96.02 + docs 238.12</td><td class="num">556.90</td><td class="num">34.81</td></tr>
+        <tr><td>FCA Cat Lai terminal</td><td class="sub">EXW + C</td><td class="num">97,178.81</td><td class="num">6,073.68</td></tr>
+        <tr><td>D. Terminal and on-board</td><td class="sub">THC, B/L, seal USD 180</td><td class="num">180.00</td><td class="num">11.25</td></tr>
+        <tr><td>FOB Cat Lai</td><td class="sub">FCA + D</td><td class="num">97,358.81</td><td class="num">6,084.93</td></tr>
+        <tr><td>E. Ocean freight</td><td class="sub">Cat Lai → Rotterdam, 20′, valid to 28 Feb 2027</td><td class="num">1,650.00</td><td class="num">103.13</td></tr>
+        <tr><td>CFR Rotterdam</td><td class="sub">FOB + E</td><td class="num">99,008.81</td><td class="num">6,188.05</td></tr>
+        <tr class="quote"><td>Quoted (rounded up per MT)</td><td class="sub">FOB 6,085 · CFR 6,189 · FCA 6,074</td><td class="num">97,360.00</td><td class="num">6,085.00</td></tr>
+      </tbody>
+    </table>
+    <div class="sheet-notes">
+      <div class="note">
+        <strong>Assumptions</strong>
+        Quoted total shown is FOB as requested (16 MT × 6,085). CFR total would be USD 99,024.00. Quote valid to 5 Dec 2026.
+      </div>
+      <div class="note">
+        <strong>Checks</strong>
+        <span class="ok">Sanctions clear.</span> FOB margin 5.96%, above the 5% floor.
+        <span class="flag">Freight valid to 28 Feb; shipment is March — flag and ask for a March rate.</span>
+        <span class="flag">FOB asked for a container — FCA Cat Lai offered as well.</span>
+        Flag EU official controls that may apply to this origin and product; confirm tests with the buyer.
+      </div>
+    </div>
+  </div>
+
+  <p class="section-label">Quotation</p>
+  <div class="card paper-wrap">
+    <article class="paper spice-paper">
+      <aside class="spice-side">
+        <div class="name">Red Sail Spice</div>
+        <div class="sub">Exporter</div>
+        <div class="side-meta">Q-2026-1117-31<br>17 Nov 2026<br><br>1×20′ dry container<br>Cat Lai, Viet Nam</div>
+      </aside>
+      <div class="spice-main">
+        <div class="spice-doc-type">
+          <h1>Quotation</h1>
+          <p>Black pepper · ASTA</p>
+        </div>
+        <div class="spice-rule"></div>
+        <div class="spice-parties">
+          <div>
+            <h2>Seller</h2>
+            Red Sail Spice<br>
+            Viet Nam<br>
+            <span class="muted">Example company</span>
+          </div>
+          <div>
+            <h2>Buyer</h2>
+            Nordisk Krydderi A/S<br>
+            Copenhagen, Denmark<br>
+            Buyer ref: RFQ 17 Nov 2026, A. Holm<br>
+            <span class="muted">Example company</span>
+          </div>
+        </div>
+        <table class="spice-table">
+          <thead>
+            <tr><th>Product</th><th class="num">Qty</th><th class="num">FOB Cat Lai<br>Incoterms 2020</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Black pepper, ASTA quality, 550 g/l min, HS 0904.11, origin Viet Nam. 25 kg new PP bags.</td>
+              <td class="num">16.00 MT<br>(640 bags)</td>
+              <td class="num">USD 6,085.00 / MT</td>
+            </tr>
+            <tr class="total"><td colspan="2">Total, +/−5% at seller’s option</td><td class="num">USD 97,360.00</td></tr>
+          </tbody>
+        </table>
+        <div class="spice-terms">
+          <p>Also available: FCA Cat Lai container terminal Incoterms 2020, USD 6,074.00 / MT, and CFR Rotterdam Incoterms 2020, USD 6,189.00 / MT.</p>
+          <p>Payment: 30% T/T advance, 70% against copy of B/L, or irrevocable L/C at sight if preferred.</p>
+          <p>Shipment: March 2027. CFR freight basis is valid to 28 Feb 2027; a March rate will be confirmed before booking.</p>
+          <p>Documents: commercial invoice, packing list, B/L, C/O, phytosanitary and fumigation certificates, ASTA specification sheet. Extra laboratory tests, if required for this origin, to be confirmed.</p>
+          <p>Validity: 5 Dec 2026. Not a binding offer until confirmed in a signed contract or proforma invoice.</p>
+        </div>
+        <p class="spice-foot">Example data, not market prices. Bank details are taken from the seller’s records and are not printed here.</p>
+      </div>
+    </article>
+  </div>
+
+  <p class="section-label">Proforma invoice</p>
+  <div class="card paper-wrap">
+    <article class="paper spice-paper">
+      <aside class="spice-side">
+        <div class="name">Red Sail Spice</div>
+        <div class="sub">Exporter</div>
+        <div class="side-meta">PI-2026-0704<br>17 Nov 2026<br><br>Ref Q-2026-1117-31</div>
+      </aside>
+      <div class="spice-main">
+        <div class="spice-doc-type">
+          <h1>Proforma invoice</h1>
+          <p>FOB Cat Lai Incoterms 2020</p>
+        </div>
+        <div class="spice-rule"></div>
+        <div class="spice-parties">
+          <div>
+            <h2>Seller / Beneficiary</h2>
+            Red Sail Spice, Viet Nam<br>
+            <span class="muted">Example company</span>
+          </div>
+          <div>
+            <h2>Buyer / Applicant</h2>
+            Nordisk Krydderi A/S, Copenhagen<br>
+            <span class="muted">Example company</span>
+          </div>
+        </div>
+        <p style="font-size:14px;margin-bottom:12px">Port of loading: Cat Lai, Viet Nam. Latest shipment date: 31 Mar 2027. Partial shipment: not allowed.</p>
+        <table class="spice-table">
+          <thead>
+            <tr><th>Item</th><th>Description</th><th class="num">Qty</th><th class="num">Unit price</th><th class="num">Amount</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Black pepper, ASTA quality, 550 g/l min, HS 0904.11</td>
+              <td class="num">16.00 MT</td>
+              <td class="num">USD 6,085.00</td>
+              <td class="num">USD 97,360.00</td>
+            </tr>
+            <tr class="total"><td colspan="4">Total, +/−5% at seller’s option</td><td class="num">USD 97,360.00</td></tr>
+          </tbody>
+        </table>
+        <div class="spice-terms">
+          <p>In words: US Dollars Ninety-Seven Thousand Three Hundred Sixty only.</p>
+          <p>Packing: 640 new 25 kg PP bags. Payment: 30% T/T advance, 70% against copy of B/L. Bank details from the seller’s records.</p>
+          <p>Estimated shipping date: March 2027. Validity: 5 Dec 2026.</p>
+        </div>
+        <p class="spice-foot">Example data, not market prices. Signature and company stamp to be applied when you send.</p>
+      </div>
+    </article>
+  </div>
+
+</div>
+</body>
+</html>

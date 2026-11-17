@@ -651,26 +651,37 @@ a.card p { margin: 0; font-size: 14px; line-height: 20px; color: var(--muted-fg)
 
 
 
-/* Compact intro on the website-builder page so the preview frame fits the first fold */
-body.website-builder .page-head-compact {
+/* Compact intro so the preview frame fits the first fold */
+body.website-builder .page-head-compact,
+body.export-quotes .page-head-compact {
   padding: 16px 0 0;
 }
-body.website-builder .page-head-compact .crumbs { margin-bottom: 8px; }
-body.website-builder .page-head-compact h1 { margin-top: 4px; }
-body.website-builder .page-head-compact .lead { margin-top: 8px; }
-body.website-builder .page-head-compact .hero-actions { margin-top: 12px; }
-body.website-builder .template-lib { margin-top: 14px; }
-body.website-builder .template-lib-label { margin-bottom: 6px; }
-body.website-builder .template-switcher { padding: 2px 2px 4px; }
+body.website-builder .page-head-compact .crumbs,
+body.export-quotes .page-head-compact .crumbs { margin-bottom: 8px; }
+body.website-builder .page-head-compact h1,
+body.export-quotes .page-head-compact h1 { margin-top: 4px; }
+body.website-builder .page-head-compact .lead,
+body.export-quotes .page-head-compact .lead { margin-top: 8px; }
+body.website-builder .page-head-compact .hero-actions,
+body.export-quotes .page-head-compact .hero-actions { margin-top: 12px; }
+body.website-builder .template-lib,
+body.export-quotes .template-lib { margin-top: 14px; }
+body.website-builder .template-lib-label,
+body.export-quotes .template-lib-label { margin-bottom: 6px; }
+body.website-builder .template-switcher,
+body.export-quotes .template-switcher { padding: 2px 2px 4px; }
 @media (min-width: 900px) {
-  body.website-builder .page-head-compact {
+  body.website-builder .page-head-compact,
+  body.export-quotes .page-head-compact {
     display: grid;
     grid-template-columns: 1fr auto;
     column-gap: 24px;
     align-items: start;
   }
-  body.website-builder .page-head-compact .crumbs { grid-column: 1 / -1; }
-  body.website-builder .page-head-compact .hero-actions {
+  body.website-builder .page-head-compact .crumbs,
+  body.export-quotes .page-head-compact .crumbs { grid-column: 1 / -1; }
+  body.website-builder .page-head-compact .hero-actions,
+  body.export-quotes .page-head-compact .hero-actions {
     grid-column: 2;
     grid-row: 2 / 4;
     margin-top: 4px;
@@ -816,4 +827,19 @@ body.website-builder .template-switcher { padding: 2px 2px 4px; }
 }
 @media (prefers-reduced-motion: reduce) {
   .hero-scroll-hint { transition: none; }
+}
+
+
+/* Export quotes page */
+body.export-quotes .agent-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+@media (max-width: 900px) {
+  body.export-quotes .agent-grid { grid-template-columns: 1fr; }
+}
+.example-note {
+  margin: 8px 0 0;
+  font-size: 13px;
+  line-height: 18px;
+  color: var(--muted-fg);
 }

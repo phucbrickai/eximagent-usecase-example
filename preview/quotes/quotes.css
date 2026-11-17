@@ -1,0 +1,224 @@
+
+@font-face { font-family: "Playfair"; src: url("../fonts/Playfair.ttf") format("truetype"); font-weight: 400 800; }
+@font-face { font-family: "Playfair"; src: url("../fonts/Playfair-Italic.ttf") format("truetype"); font-style: italic; }
+@font-face { font-family: "Cormorant"; src: url("../fonts/Cormorant.ttf") format("truetype"); font-weight: 400 700; }
+@font-face { font-family: "Cormorant"; src: url("../fonts/Cormorant-Italic.ttf") format("truetype"); font-style: italic; }
+@font-face { font-family: "Outfit"; src: url("../fonts/Outfit.ttf") format("truetype"); font-weight: 300 800; }
+@font-face { font-family: "Nunito"; src: url("../fonts/Nunito.ttf") format("truetype"); font-weight: 400 800; }
+@font-face { font-family: "Oswald"; src: url("../fonts/Oswald.ttf") format("truetype"); font-weight: 400 700; }
+@font-face { font-family: "Barlow"; src: url("../fonts/BarlowCondensed.ttf") format("truetype"); font-weight: 400; }
+@font-face { font-family: "Barlow"; src: url("../fonts/BarlowCondensed-SemiBold.ttf") format("truetype"); font-weight: 600; }
+@font-face { font-family: "Barlow"; src: url("../fonts/BarlowCondensed-Bold.ttf") format("truetype"); font-weight: 700; }
+@font-face { font-family: "Source Sans"; src: url("../fonts/SourceSans.ttf") format("truetype"); font-weight: 400; }
+@font-face { font-family: "Source Sans"; src: url("../fonts/SourceSans-Semibold.ttf") format("truetype"); font-weight: 600; }
+@font-face { font-family: "DM Sans"; src: url("../fonts/DMSans.ttf") format("truetype"); font-weight: 100 900; }
+@font-face { font-family: "Lora"; src: url("../fonts/Lora.ttf") format("truetype"); font-weight: 400 700; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  background: #e8e6e2;
+  color: #1a1a1a;
+  font-family: "DM Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+body.is-full { width: 1280px; overflow: visible; }
+.pack {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 36px 48px 64px;
+  background: #e8e6e2;
+}
+.section-label {
+  font-family: "DM Sans", sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: #5f6368;
+  margin: 36px 0 12px;
+}
+.section-label:first-child { margin-top: 0; }
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 28px rgba(32,24,16,.08);
+  overflow: hidden;
+}
+.muted { color: #5f6368; }
+.example-line {
+  font-size: 12px;
+  color: #5f6368;
+  margin-top: 8px;
+}
+
+/* ===== Email ===== */
+.email { padding: 0; background: #fff; }
+.email-bar {
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px 20px; background: #f3f1ee;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  font-size: 13px; color: #5f6368;
+}
+.email-dots { display: flex; gap: 6px; }
+.email-dots i { width: 10px; height: 10px; border-radius: 50%; display: block; }
+.email-dots i:nth-child(1) { background: #ff5f57; }
+.email-dots i:nth-child(2) { background: #febc2e; }
+.email-dots i:nth-child(3) { background: #28c840; }
+.email-body { padding: 28px 36px 32px; }
+.email-meta { display: grid; grid-template-columns: 88px 1fr; gap: 6px 12px; margin-bottom: 22px; font-size: 15px; line-height: 1.45; }
+.email-meta .k { color: #5f6368; }
+.email-meta .v { font-weight: 500; }
+.email-meta .subject { font-weight: 600; font-size: 17px; }
+.email-letter { font-size: 16px; line-height: 1.6; color: #222; }
+.email-letter p { margin: 0 0 12px; }
+.email-letter ul { margin: 0 0 12px 18px; }
+.email-letter li { margin: 0 0 4px; }
+
+/* ===== WhatsApp ===== */
+.wa { background: #efeae2; padding: 24px 36px 32px; }
+.wa-head {
+  display: flex; align-items: center; gap: 14px;
+  background: #075e54; color: #fff; margin: -24px -36px 22px;
+  padding: 14px 20px;
+}
+.wa-ava {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: #128c7e; display: grid; place-items: center;
+  font-weight: 700; font-size: 16px;
+}
+.wa-name { font-weight: 600; font-size: 16px; }
+.wa-sub { font-size: 12px; opacity: .8; }
+.wa-bubble {
+  background: #fff; border-radius: 8px 8px 8px 2px;
+  padding: 14px 16px; max-width: 640px;
+  box-shadow: 0 1px 1px rgba(0,0,0,.06);
+  font-size: 15px; line-height: 1.55; white-space: pre-wrap;
+}
+.wa-time { font-size: 11px; color: #667781; text-align: right; margin-top: 8px; }
+
+/* ===== Costing sheet ===== */
+.sheet { padding: 28px 32px 24px; }
+.sheet-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 18px; }
+.sheet-title { font-size: 22px; font-weight: 600; letter-spacing: -.3px; }
+.sheet-meta { font-size: 13px; color: #5f6368; text-align: right; line-height: 1.5; }
+table.grid { width: 100%; border-collapse: collapse; font-size: 14px; }
+table.grid th {
+  text-align: left; font-size: 11px; letter-spacing: .08em; text-transform: uppercase;
+  color: #5f6368; font-weight: 600; padding: 8px 10px; border-bottom: 1px solid rgba(0,0,0,.12);
+  background: #f7f5f2;
+}
+table.grid th.num, table.grid td.num { text-align: right; font-variant-numeric: tabular-nums; }
+table.grid td { padding: 8px 10px; border-bottom: 1px solid rgba(0,0,0,.06); vertical-align: top; }
+table.grid tr.total td { font-weight: 600; background: #f3f1ee; border-bottom: none; }
+table.grid tr.quote td { font-weight: 700; background: #ece8e0; }
+table.grid .sub { color: #5f6368; font-size: 13px; }
+.sheet-notes { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 18px; }
+.note {
+  background: #f7f5f2; border-radius: 10px; padding: 12px 14px;
+  font-size: 13px; line-height: 1.5;
+}
+.note strong { display: block; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; margin-bottom: 4px; color: #3c3c3c; }
+.flag { color: #8a5a00; }
+.ok { color: #1b6b3a; }
+
+/* ===== Shared paper ===== */
+.paper-wrap { padding: 28px 40px 36px; background: #d9d4cc; display: flex; justify-content: center; }
+.paper {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(40,30,16,.16);
+  padding: 48px 56px 52px;
+}
+
+/* ===== Coffee document ===== */
+.coffee-paper { background: #f7f1e8; color: #1c1410; }
+.coffee-brand {
+  display: flex; justify-content: space-between; align-items: flex-start;
+  border-bottom: 2px solid #c4a574; padding-bottom: 18px; margin-bottom: 28px;
+}
+.coffee-mark { font-family: "Cormorant", serif; }
+.coffee-mark .name { font-style: italic; font-size: 34px; line-height: 1; color: #2a1c12; }
+.coffee-mark .sub { font-family: "Source Sans", sans-serif; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: #8a6a42; margin-top: 4px; }
+.coffee-doc-type { text-align: right; }
+.coffee-doc-type h1 { font-family: "Cormorant", serif; font-size: 28px; font-weight: 500; letter-spacing: .04em; }
+.coffee-doc-type p { font-size: 13px; color: #5a4636; margin-top: 4px; }
+.coffee-parties { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-bottom: 24px; font-size: 14px; line-height: 1.5; }
+.coffee-parties h2 { font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #8a6a42; margin-bottom: 6px; font-weight: 600; }
+.coffee-body { font-size: 14.5px; line-height: 1.55; }
+.coffee-body h3 { font-family: "Cormorant", serif; font-size: 20px; font-weight: 500; margin: 22px 0 8px; }
+.coffee-prices { width: 100%; border-collapse: collapse; margin: 8px 0 16px; }
+.coffee-prices td { padding: 8px 0; border-bottom: 1px solid rgba(42,28,18,.12); font-size: 15px; }
+.coffee-prices td.num { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+.coffee-prices tr.main td { font-size: 16px; }
+.coffee-prices tr.main td.num { font-size: 18px; }
+.coffee-foot { margin-top: 28px; font-size: 12px; color: #5a4636; line-height: 1.5; }
+
+/* ===== Rice document ===== */
+.rice-paper { background: #fffcf6; color: #1a1f14; }
+.rice-brand {
+  display: flex; align-items: stretch; gap: 0; margin: -48px -56px 28px;
+  background: #1f3a24; color: #f4e6c3;
+}
+.rice-gold { width: 10px; background: #c9a227; }
+.rice-head { flex: 1; padding: 26px 40px 22px; display: flex; justify-content: space-between; align-items: center; }
+.rice-mark .name { font-family: "Outfit", sans-serif; font-weight: 700; font-size: 26px; letter-spacing: .06em; text-transform: uppercase; }
+.rice-mark .sub { font-family: "Nunito", sans-serif; font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: #e6d59a; margin-top: 4px; }
+.rice-doc-type { text-align: right; font-family: "Outfit", sans-serif; }
+.rice-doc-type h1 { font-size: 22px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: #fff; }
+.rice-doc-type p { font-size: 13px; color: #e6d59a; margin-top: 4px; }
+.rice-parties { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 20px; font-size: 14px; line-height: 1.5; }
+.rice-parties h2 { font-family: "Outfit", sans-serif; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: #1f3a24; margin-bottom: 6px; }
+.rice-table { width: 100%; border-collapse: collapse; margin: 12px 0 16px; font-size: 14px; }
+.rice-table th { background: #1f3a24; color: #f4e6c3; font-weight: 600; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; padding: 8px 10px; text-align: left; }
+.rice-table th.num, .rice-table td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.rice-table td { padding: 10px; border-bottom: 1px solid #e6dfd0; }
+.rice-table tr.total td { font-weight: 700; background: #f4eee0; border-bottom: none; }
+.rice-terms { font-size: 14px; line-height: 1.55; }
+.rice-terms p { margin: 0 0 8px; }
+.rice-foot { margin-top: 24px; font-size: 12px; color: #5a5848; border-top: 2px solid #c9a227; padding-top: 12px; }
+
+/* ===== Cashew document ===== */
+.cashew-paper { background: #faf6f0; color: #2a241c; }
+.cashew-brand { text-align: left; margin-bottom: 8px; }
+.cashew-brand .name { font-family: "Playfair", serif; font-size: 32px; font-weight: 600; letter-spacing: -.4px; }
+.cashew-brand .sub { font-family: "Source Sans", sans-serif; font-size: 11px; letter-spacing: .2em; text-transform: uppercase; color: #7a6a58; margin-top: 2px; }
+.cashew-rule { height: 1px; background: #2a241c; margin: 16px 0 8px; }
+.cashew-doc-type { display: flex; justify-content: space-between; align-items: baseline; margin: 18px 0 24px; }
+.cashew-doc-type h1 { font-family: "Playfair", serif; font-size: 26px; font-weight: 500; }
+.cashew-doc-type p { font-size: 14px; color: #5a5348; }
+.cashew-parties { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 24px; font-size: 14.5px; line-height: 1.5; }
+.cashew-parties h2 { font-family: "Playfair", serif; font-size: 13px; font-style: italic; font-weight: 400; color: #7a6a58; margin-bottom: 6px; }
+.cashew-body { font-size: 14.5px; line-height: 1.6; }
+.cashew-prices { width: 100%; margin: 12px 0 18px; border-collapse: collapse; }
+.cashew-prices td { padding: 9px 0; border-bottom: 1px solid #e6ddd0; }
+.cashew-prices td.num { text-align: right; font-variant-numeric: tabular-nums; font-weight: 600; }
+.cashew-prices tr.main td { font-family: "Playfair", serif; font-size: 18px; }
+.cashew-foot { margin-top: 28px; font-size: 12px; color: #5a5348; line-height: 1.5; }
+
+/* ===== Spice document ===== */
+.spice-paper { background: #fbf6ee; color: #1a1010; padding: 0 !important; display: grid; grid-template-columns: 180px 1fr; min-height: 640px; }
+.spice-side {
+  background: #7a1212; color: #f6e7c7; padding: 36px 22px;
+  font-family: "Oswald", sans-serif;
+}
+.spice-side .name { font-size: 28px; line-height: 1.05; letter-spacing: .02em; text-transform: uppercase; }
+.spice-side .sub { font-family: "Barlow", sans-serif; font-size: 13px; letter-spacing: .16em; text-transform: uppercase; color: #e8a317; margin-top: 8px; }
+.spice-side .side-meta { margin-top: 36px; font-family: "Source Sans", sans-serif; font-size: 13px; line-height: 1.5; color: #f0d9b0; }
+.spice-main { padding: 40px 40px 44px; }
+.spice-doc-type h1 { font-family: "Oswald", sans-serif; font-size: 28px; letter-spacing: .06em; text-transform: uppercase; }
+.spice-doc-type p { font-family: "Barlow", sans-serif; font-size: 15px; color: #7a1212; margin-top: 2px; }
+.spice-rule { height: 4px; background: #e8a317; width: 80px; margin: 12px 0 22px; }
+.spice-parties { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-bottom: 18px; font-size: 14px; line-height: 1.5; }
+.spice-parties h2 { font-family: "Oswald", sans-serif; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: #7a1212; margin-bottom: 4px; }
+.spice-table { width: 100%; border-collapse: collapse; font-size: 14px; margin: 8px 0 16px; }
+.spice-table th { background: #7a1212; color: #f6e7c7; font-family: "Oswald", sans-serif; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; font-size: 11px; padding: 8px 10px; text-align: left; }
+.spice-table th.num, .spice-table td.num { text-align: right; font-variant-numeric: tabular-nums; }
+.spice-table td { padding: 9px 10px; border-bottom: 1px solid #eadcc8; }
+.spice-table tr.total td { font-weight: 700; background: #f3e6cf; }
+.spice-terms { font-size: 14px; line-height: 1.55; }
+.spice-foot { margin-top: 22px; font-size: 12px; color: #5a4840; }
+
+@media (min-width: 1281px) {
+  html, body { background: #f4f3f0; }
+  .pack { box-shadow: 0 0 0 1px rgba(0,0,0,.04); }
+}
