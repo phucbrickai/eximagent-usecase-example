@@ -3,16 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Export quotes from a buyer's RFQ · EximAgent Academy</title>
+  <title>Export quotes · EximAgent Academy</title>
   <meta name="description" content="Hire AI employees who read a buyer's RFQ, build the export price, and draft the quote and proforma invoice for you to check and send.">
   <link rel="icon" href="images/eximagent-mark.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="export-quotes.css">
+  <link rel="stylesheet" href="export-quotes-a.css">
+  <link rel="preload" as="image" href="images/xq/warehouse.webp">
 </head>
-<body class="xq">
+<body class="xa">
   <header class="site-header">
     <div class="bar">
       <a class="brand" href="index.html">
@@ -45,290 +46,184 @@
       </nav>
     </div>
   </div>
-
   <main>
-    <!-- 1. Hero: the buyer's RFQ becomes your quote -->
-    <section class="xq-hero">
-      <div class="container xq-hero-grid">
-        <div class="xq-hero-copy">
-          <ol class="crumbs">
-            <li><a href="index.html">Academy</a></li>
-            <li class="sep" aria-hidden="true">›</li>
-            <li><a href="index.html">Use cases</a></li>
-            <li class="sep" aria-hidden="true">›</li>
-            <li>Export quotes</li>
-          </ol>
-          <h1>Turn a buyer's RFQ into a quote</h1>
-          <p class="xq-lead">Your AI employees read the request, build the price, and draft the quote and proforma invoice.</p>
-          <a class="btn btn-primary btn-lg" href="https://eximagent.ai/">Build your quoting team</a>
-        </div>
-
-        <figure class="xq-hero-art" data-pair-cycle>
-          <article class="rfq-card" aria-label="Buyer's RFQ email">
-            <div class="mail-top">
-              <span class="who-dot" aria-hidden="true">JW</span>
-              <div>
-                <strong>Jonas Weber</strong> · Nordkaffee Import GmbH
-                <span class="mail-sub">RFQ: Vietnam Robusta, 1×20′, CIF Hamburg</span>
-              </div>
-            </div>
-            <p>Hello, please quote <mark data-k="prod">Robusta G1, Screen 18</mark>, <mark data-k="qty">1×20′ = 19.2 MT</mark>, shipment <mark data-k="ship">January 2027</mark>, <mark data-k="term">CIF Hamburg</mark>. Payment <mark data-k="pay">CAD or L/C at sight</mark>. Best price by Friday, please.</p>
-          </article>
-
-          <div class="hero-team" aria-hidden="true">
-            <img src="images/mascots/sm/analyst.png" alt="">
-            <img src="images/mascots/sm/outbound.png" alt="">
-            <img src="images/mascots/sm/expo.png" alt="">
-          </div>
-
-          <article class="quote-card" aria-label="Drafted quotation">
-            <header>
-              <div class="q-brand">Lak Highlands<span>Coffee · Buon Ma Thuot</span></div>
-              <div class="q-no">Quotation<span>Q-2026-1117-01</span></div>
-            </header>
-            <dl>
-              <div data-k="prod"><dt>Product</dt><dd>Vietnam Robusta G1, Screen 18, wet polished</dd></div>
-              <div data-k="qty"><dt>Quantity</dt><dd>19.2 MT, 320 jute bags × 60 kg</dd></div>
-              <div data-k="term" class="q-price"><dt>CIF Hamburg Incoterms 2020</dt><dd>USD 5,012.00 / MT</dd></div>
-              <div data-k="pay"><dt>Payment</dt><dd>Irrevocable L/C at sight, UCP 600</dd></div>
-              <div data-k="ship"><dt>Shipment</dt><dd>January 2027 · valid to 24 Nov 2026</dd></div>
-            </dl>
-          </article>
-          <figcaption>Example deal with made-up numbers.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <!-- 2. Build the price: scroll-driven ladder -->
-    <section class="section xq-build" id="price">
+    <section class="a-hero">
       <div class="container">
-        <h2>Watch the price get built</h2>
-        <p class="section-lead">Each employee adds their line, from your costs to CIF Hamburg.</p>
-
-        <div class="build" data-build>
-          <div class="build-steps">
-            <article class="bstep" data-step="0">
-              <img class="av" src="images/mascots/sm/analyst.png" alt="">
-              <div>
-                <h3>Analyst screens the buyer</h3>
-                <p>Nordkaffee Import, Germany. New buyer, sanctions check clear.</p>
-              </div>
-            </article>
-            <article class="bstep" data-step="1">
-              <img class="av" src="images/mascots/sm/outbound.png" alt="">
-              <div>
-                <h3>Sales pulls your costs</h3>
-                <p>Green coffee from your price list, plus sorting, polishing, and jute bags.</p>
-                <p class="adds">Goods cost <b>88,489.46</b></p>
-              </div>
-            </article>
-            <article class="bstep" data-step="2">
-              <img class="av" src="images/mascots/sm/outbound.png" alt="">
-              <div>
-                <h3>Sales adds your margin</h3>
-                <p>Your 5% target, checked against your 4% floor.</p>
-                <p class="adds">Margin <b>+ 4,657.34</b></p>
-              </div>
-            </article>
-            <article class="bstep" data-step="3">
-              <img class="av" src="images/mascots/sm/expo.png" alt="">
-              <div>
-                <h3>Trade-Ops gets it to Cat Lai</h3>
-                <p>Trucking, customs, certificates, then terminal handling and the B/L.</p>
-                <p class="adds">Origin and on-board <b>+ 756.10</b></p>
-              </div>
-            </article>
-            <article class="bstep" data-step="4">
-              <img class="av" src="images/mascots/sm/expo.png" alt="">
-              <div>
-                <h3>Trade-Ops picks the freight</h3>
-                <p>Forwarder A's USD 2,150 per 20′ beats B. It ends 30 Nov, so a freight clause goes in.</p>
-                <p class="adds">Ocean freight <b>+ 2,150.00</b></p>
-              </div>
-            </article>
-            <article class="bstep" data-step="5">
-              <img class="av" src="images/mascots/sm/expo.png" alt="">
-              <div>
-                <h3>Trade-Ops insures the cargo</h3>
-                <p>110% of the invoice value, ICC (C), as CIF requires.</p>
-                <p class="adds">Insurance <b>+ 158.75</b></p>
-              </div>
-            </article>
-            <article class="bstep" data-step="6">
-              <img class="av" src="images/mascots/sm/outbound.png" alt="">
-              <div>
-                <h3>Sales drafts the quote and PI</h3>
-                <p>Rounded up per MT, with FCA Cat Lai offered next to CIF.</p>
-                <p class="adds">Quoted <b>USD 5,012.00 / MT</b></p>
-              </div>
-            </article>
+        <div class="a-hero-stage">
+          <img class="a-hero-bg" src="images/xq/warehouse.webp" alt="Sacks of green robusta coffee in an export warehouse, with a container being loaded outside." width="1280" height="720">
+          <div class="a-hero-copy">
+            {CRUMBS}
+            <h1>Turn a buyer's RFQ into a quote</h1>
+            <p>Your AI employees read the request, build the price, and draft the quote and PI.</p>
+            <a class="btn btn-primary btn-lg" href="https://eximagent.ai/">Build your quoting team</a>
           </div>
-
-          <aside class="ladder" aria-label="Costing sheet, 1×20′ Robusta to Hamburg">
-            <div class="ladder-head">
-              <div>
-                <strong>Costing sheet</strong>
-                <span>Robusta G1 S18 · 19.2 MT · USD</span>
-              </div>
-              <div class="buyer-check" data-show="0"><span aria-hidden="true">✓</span> Buyer clear</div>
-            </div>
-            <ol class="ladder-rows">
-              <li data-show="1" data-who="outbound"><img src="images/mascots/sm/outbound.png" alt=""><span>Goods cost</span><b>88,489.46</b></li>
-              <li data-show="2" data-who="outbound"><img src="images/mascots/sm/outbound.png" alt=""><span>Margin 5%</span><b>4,657.34</b></li>
-              <li data-show="2" class="sub"><span>EXW Buon Ma Thuot</span><b>93,146.80</b></li>
-              <li data-show="3"><img src="images/mascots/sm/expo.png" alt=""><span>Trucking, customs, docs</span><b>576.10</b></li>
-              <li data-show="3" class="sub"><span>FCA Cat Lai terminal</span><b>93,722.90</b></li>
-              <li data-show="3"><img src="images/mascots/sm/expo.png" alt=""><span>Terminal, B/L, seal</span><b>180.00</b></li>
-              <li data-show="3" class="sub"><span>FOB Cat Lai</span><b>93,902.90</b></li>
-              <li data-show="4"><img src="images/mascots/sm/expo.png" alt=""><span>Ocean freight</span><b>2,150.00</b></li>
-              <li data-show="4" class="sub"><span>CFR Hamburg</span><b>96,052.90</b></li>
-              <li data-show="5"><img src="images/mascots/sm/expo.png" alt=""><span>Insurance 110%, ICC (C)</span><b>158.75</b></li>
-              <li data-show="5" class="sub"><span>CIF Hamburg</span><b>96,211.65</b></li>
-            </ol>
-            <div class="ladder-total">
-              <span class="lt-term" data-term>Waiting for costs</span>
-              <span class="lt-num"><small>USD</small> <b data-total>0.00</b> <small>/ MT</small></span>
-            </div>
-            <div class="ladder-bar" aria-hidden="true">
-              <i data-seg="2">EXW</i><i data-seg="3">FOB</i><i data-seg="4">CFR</i><i data-seg="5">CIF</i><i data-seg="6">Quote</i>
-            </div>
-          </aside>
+          <div class="a-float a-rfq" aria-hidden="true">
+            <span class="a-from">Jonas · Hamburg importer</span>
+            Please quote Robusta G1, 1×20′, <b>CIF Hamburg</b>, shipment January.
+          </div>
+          <div class="a-float a-team" aria-hidden="true">
+            <img src="{M['analyst']}" alt=""><img src="{M['sales']}" alt=""><img src="{M['ops']}" alt="">
+          </div>
+          <div class="a-float a-quote" aria-hidden="true">
+            <span class="a-qlabel">Quotation · Robusta G1 S18</span>
+            <span class="a-qprice">USD 5,012<small> / MT</small></span>
+            <span class="a-qterm">CIF Hamburg · L/C at sight</span>
+          </div>
         </div>
+        <p class="a-note">Example deals with made-up numbers.</p>
       </div>
     </section>
 
-    <!-- 3. Incoterm changes where your price stops -->
-    <section class="section xq-terms" id="incoterms">
+
+    <section class="section a-lib" id="templates">
       <div class="container">
-        <h2>Change the Incoterm, see the price</h2>
-        <p class="section-lead">The same coffee, priced to a different hand-over point.</p>
-
-        <div class="terms" data-terms>
-          <div class="terms-switch" role="radiogroup" aria-label="Incoterm">
-            <button type="button" role="radio" aria-checked="false" data-term="EXW">EXW</button>
-            <button type="button" role="radio" aria-checked="false" data-term="FCA">FCA</button>
-            <button type="button" role="radio" aria-checked="false" data-term="FOB">FOB</button>
-            <button type="button" role="radio" aria-checked="false" data-term="CFR">CFR</button>
-            <button type="button" role="radio" aria-checked="true" data-term="CIF">CIF</button>
+        <h2>See what they can make</h2>
+        <p class="section-lead">Six quote styles, five products. Pick one to see it full size.</p>
+        <div class="lib">
+          <div class="lib-pick" role="group" aria-label="Quote styles">
+            <button type="button" class="tcard" data-tpl="coffee" data-name="Coffee · Heritage" data-route="CIF Hamburg" aria-pressed="false">
+              <img src="images/xq/tpl-coffee-sm.webp" alt="" loading="lazy" width="360" height="509">
+              <span class="tc-name">Coffee</span><span class="tc-style">Heritage</span>
+            </button>
+            <button type="button" class="tcard" data-tpl="rice" data-name="Rice · Bold band" data-route="CFR Jebel Ali" aria-pressed="false">
+              <img src="images/xq/tpl-rice-sm.webp" alt="" loading="lazy" width="360" height="509">
+              <span class="tc-name">Rice</span><span class="tc-style">Bold band</span>
+            </button>
+            <button type="button" class="tcard" data-tpl="cashew" data-name="Cashew · Minimal" data-route="CFR Rotterdam" aria-pressed="false">
+              <img src="images/xq/tpl-cashew-sm.webp" alt="" loading="lazy" width="360" height="509">
+              <span class="tc-name">Cashew</span><span class="tc-style">Minimal</span>
+            </button>
+            <button type="button" class="tcard" data-tpl="spice" data-name="Pepper · Side column" data-route="FOB Cat Lai" aria-pressed="false">
+              <img src="images/xq/tpl-spice-sm.webp" alt="" loading="lazy" width="360" height="509">
+              <span class="tc-name">Pepper</span><span class="tc-style">Side column</span>
+            </button>
+            <button type="button" class="tcard" data-tpl="durian" data-name="Durian · Photo cover" data-route="CIF Shanghai" aria-pressed="false">
+              <img src="images/xq/tpl-durian-sm.webp" alt="" loading="lazy" width="360" height="509">
+              <span class="tc-name">Durian</span><span class="tc-style">Photo cover</span>
+            </button>
+            <button type="button" class="tcard" data-tpl="arabica" data-name="Arabica · Night mode" data-route="FCA Cat Lai" aria-pressed="false">
+              <img src="images/xq/tpl-arabica-sm.webp" alt="" loading="lazy" width="360" height="509">
+              <span class="tc-name">Arabica</span><span class="tc-style">Night mode</span>
+            </button>
+            <a class="tcard tc-yours" href="#make">
+              <img src="images/xq/tpl-yours-sm.webp" alt="" loading="lazy" width="360" height="509">
+              <span class="tc-name">Your product</span><span class="tc-style">Make your own</span>
+            </a>
           </div>
-
-          <div class="route" data-level="5">
-            <div class="stop s0">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10 12 4l9 6v10H3z M8 20v-6h8v6" /></svg>
-              <span>Warehouse<small>Buon Ma Thuot</small></span>
+          <div class="lib-view">
+            <div class="lib-bar">
+              <div><b data-vname>Coffee · Heritage</b><span data-vroute>CIF Hamburg</span></div>
+              <div class="lib-arrows">
+                <button type="button" class="la" data-lprev aria-label="Previous style">←</button>
+                <button type="button" class="la" data-lnext aria-label="Next style">→</button>
+              </div>
             </div>
-            <div class="leg l1"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 7h11v9H2z M13 10h4l3 3v3h-7 M6 19a2 2 0 1 0 0-.1 M16 19a2 2 0 1 0 0-.1" /></svg><span>Truck and customs</span></div>
-            <div class="stop s1">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V5h4v16 M8 7h12 M18 7v6 M15 13h6v4h-6z M2 21h20" /></svg>
-              <span>Cat Lai terminal<small>Ho Chi Minh City</small></span>
+            <div class="lib-stage" tabindex="0" aria-label="Full-size quote preview">
+              <img data-vimg src="images/xq/tpl-coffee.webp" alt="Coffee quotation in the Heritage style." width="1100" height="1556">
             </div>
-            <div class="leg l2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12 M7 10l5 5 5-5 M4 20h16" /></svg><span>On board</span></div>
-            <div class="stop s2">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 15h18l-3 5H6z M6 15V9h12v6 M10 9V5h4v4" /></svg>
-              <span>Vessel<small>Cat Lai</small></span>
-            </div>
-            <div class="leg l3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12c3-3 5 3 8 0s5 3 8 0 3-1 4-1 M2 17c3-3 5 3 8 0s5 3 8 0 3-1 4-1" /></svg><span>Sea freight<em class="ins"> + insurance</em></span></div>
-            <div class="stop s3">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 21V4 M5 4h12l-3 4 3 4H5" /></svg>
-              <span>Hamburg<small>Germany</small></span>
-            </div>
-          </div>
-
-          <div class="terms-out">
-            <p class="terms-price"><span data-term-name>CIF Hamburg</span> <b>USD <span data-term-price>5,012</span></b> <small>/ MT</small></p>
-            <p class="terms-line" data-term-line>You also insure the cargo to Hamburg.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- 4. You check and send -->
-    <section class="section xq-review" id="review">
+    <section class="section a-make" id="make">
       <div class="container">
-        <h2>You check it, then send</h2>
-        <p class="section-lead">The team hands you the draft, with notes on what to check.</p>
+        <h2>Make one for your product</h2>
+        <p class="section-lead">Share your product, brand, and prices. Sales turns them into your own template.</p>
+        <div class="make">
+          <div class="make-in">
+            <article class="tile mi">
+              <img src="images/products/coffee-robusta.jpg" alt="Green robusta coffee beans." loading="lazy">
+              <div class="tile-cap"><p><b>Your product</b> photos, grades, and packing</p></div>
+            </article>
+            <article class="tile mi mi-brand">
+              <div class="brandboard" aria-hidden="true">
+                <span class="bb-logo">Your logo</span>
+                <span class="bb-sw"><i style="background:#3b2a20"></i><i style="background:#c9b79c"></i><i style="background:#0f4d3a"></i><i style="background:#f2c14e"></i></span>
+                <span class="bb-type">Aa <em>Aa</em></span>
+              </div>
+              <div class="tile-cap"><p><b>Your brand</b> logo, colors, and fonts</p></div>
+            </article>
+            <article class="tile mi">
+              <img src="images/xq/desk.webp" alt="An exporter's desk with a laptop showing a price list." loading="lazy">
+              <div class="tile-cap"><p><b>Your price list</b> and usual terms</p></div>
+            </article>
+          </div>
+          <div class="make-arrow" aria-hidden="true">
+            <img src="images/mascots/md/outbound.webp" alt="">
+            <svg viewBox="0 0 120 24"><path d="M2 12h108M100 3l10 9-10 9" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 6"/></svg>
+          </div>
+          <div class="make-out" aria-label="Your template, from blank to finished">
+            <img class="mo-a" src="images/xq/tpl-yours.webp" alt="" loading="lazy">
+            <img class="mo-b" src="images/xq/tpl-coffee.webp" alt="A finished quote template in your brand." loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <div class="review">
-          <article class="draft" aria-label="Draft reply to the buyer">
-            <div class="draft-bar">
-              <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
-              <span>Draft</span>
-            </div>
-            <div class="draft-meta">
-              <div><span>To</span>Jonas Weber &lt;purchasing@nordkaffee.example&gt;</div>
-              <div><span>Subject</span>RE: RFQ Vietnam Robusta G1 S18, 1×20′, CIF Hamburg</div>
-            </div>
-            <div class="draft-body">
-              <p>Dear Mr. Weber,</p>
-              <p>Thank you for your enquiry. Our offer for 1×20′ (19.2 MT) Vietnam Robusta Grade 1, Screen 18, wet polished:</p>
-              <p class="offer">CIF Hamburg Incoterms 2020: <b>USD 5,012.00 / MT</b><br>FCA Cat Lai terminal Incoterms 2020: <b>USD 4,882.00 / MT</b></p>
-              <p>Payment by irrevocable L/C at sight. Offer valid until 24 Nov 2026.</p>
-            </div>
-            <div class="draft-files">
-              <button type="button" class="file" data-open="doc-quote">
-                <span class="file-thumb" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-                <span>Q-2026-1117-01.pdf<small>Quotation</small></span>
-              </button>
-              <button type="button" class="file" data-open="doc-pi">
-                <span class="file-thumb" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
-                <span>PI-2026-0412.pdf<small>Proforma invoice</small></span>
-              </button>
-            </div>
-            <div class="draft-send">
-              <button type="button" class="btn btn-primary btn-md" data-send>Send</button>
-              <span class="sent-note" data-sent hidden>Sales will remind you on 22 Nov, before the offer ends.</span>
-            </div>
+    <section class="section a-run" id="run">
+      <div class="container">
+        <h2>Then let them run your quoting</h2>
+        <p class="section-lead">Every new RFQ becomes a quote and PI in your template.</p>
+        <div class="bento run">
+          <article class="tile">
+            <img src="images/xq/arrival.webp" alt="A harbor city with a container ship arriving." loading="lazy">
+            <div class="tile-ui ui-rfq" aria-hidden="true"><span>New RFQ · Hamburg</span>Robusta G1, 1×20′, CIF Hamburg, January</div>
+            <div class="tile-cap"><img src="images/mascots/md/analyst.webp" alt=""><p><b>Analyst</b> checks the new buyer.</p></div>
           </article>
-
-          <ul class="notes" aria-label="Notes from the team">
-            <li>
-              <img src="images/mascots/sm/outbound.png" alt="">
-              <div><strong>Sales</strong><p>Margin is 4.86%, above your 4% floor.</p></div>
-            </li>
-            <li>
-              <img src="images/mascots/sm/expo.png" alt="">
-              <div><strong>Trade-Ops</strong><p>Freight ends 30 Nov, shipment is January. I added a freight clause.</p></div>
-            </li>
-            <li>
-              <img src="images/mascots/sm/analyst.png" alt="">
-              <div><strong>Analyst</strong><p>New buyer, so L/C at sight instead of CAD.</p></div>
-            </li>
-            <li>
-              <img src="images/mascots/sm/expo.png" alt="">
-              <div><strong>Trade-Ops</strong><p>EUDR applies. Please confirm we can share plot geolocation data.</p></div>
-            </li>
-          </ul>
+          <article class="tile">
+            <img src="images/xq/beans.webp" alt="Green robusta beans in a sample tray next to a moisture meter." loading="lazy">
+            <div class="tile-ui ui-spec" aria-hidden="true"><span>Robusta G1 · Screen 18</span><span>19.2 MT · 320 bags</span><span>Margin 5%</span></div>
+            <div class="tile-cap"><img src="images/mascots/md/outbound.webp" alt=""><p><b>Sales</b> prices it from your costs.</p></div>
+          </article>
+          <article class="tile">
+            <img src="images/xq/ship.webp" alt="A container ship at sea at sunrise." loading="lazy">
+            <div class="tile-ui ui-rates" aria-hidden="true">
+              <span class="pick"><b>Forwarder A</b> USD 2,150</span>
+              <span><b>Forwarder B</b> USD 2,300</span>
+            </div>
+            <div class="tile-cap"><img src="images/mascots/md/expo.webp" alt=""><p><b>Trade-Ops</b> picks the better freight.</p></div>
+          </article>
+        </div>
+        <div class="a-desk">
+          <img src="images/xq/desk.webp" alt="An exporter's desk with a laptop, a jar of green coffee and a Vietnamese phin coffee." loading="lazy">
+          <div class="desk-docs" aria-hidden="true">
+            <img class="dd1" src="images/xq/tpl-coffee-sm.webp" alt="">
+            <img class="dd2" src="images/xq/tpl-coffee-sm.webp" alt="">
+          </div>
+          <div class="a-desk-card">
+            <h3>You check it, then send</h3>
+            <ul>
+              <li><img src="images/mascots/md/outbound.webp" alt=""> Margin 4.86%, above your 4% floor</li>
+              <li><img src="images/mascots/md/expo.webp" alt=""> Freight ends 30 Nov, clause added</li>
+              <li><img src="images/mascots/md/analyst.webp" alt=""> New buyer, L/C at sight</li>
+            </ul>
+            <div class="a-files"><span>Quotation</span><span>Proforma invoice</span></div>
+            <button type="button" class="btn btn-primary btn-md" data-send>Send to Jonas</button>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section">
+    <section class="section faq-wrap">
       <div class="container">
         <h2>Questions</h2>
         <div class="faq">
+          <details>
+            <summary>Can the quote match my brand?</summary>
+            <p>Yes. Share your logo, colors, and an old quote you like, and Sales builds your template from them.</p>
+          </details>
           <details>
             <summary>Who sends the quote?</summary>
             <p>You do. You read the draft and the team's notes, change anything you like, and send it yourself.</p>
           </details>
           <details>
-            <summary>Where do the costs come from?</summary>
+            <summary>Where do the prices come from?</summary>
             <p>From the price list, cost sheet, and freight rates you give them. It works with the apps you already use.</p>
           </details>
           <details>
-            <summary>Which Incoterms can they quote?</summary>
-            <p>Any Incoterms 2020 term, written with a named place. For containers they can add FCA next to FOB or CIF.</p>
-          </details>
-          <details>
-            <summary>What if the freight rate runs out before shipment?</summary>
-            <p>Trade-Ops points it out and adds a freight clause, so you can keep it or ask the forwarder for a new rate.</p>
-          </details>
-          <details>
-            <summary>Can I set up the team my own way?</summary>
-            <p>Yes. You hire each employee, write their role and responsibilities, and choose who hands work to whom.</p>
-          </details>
-          <details>
-            <summary>Does it work for products other than coffee?</summary>
-            <p>Yes. Rice, cashews, spices, seafood, or furniture follow the same steps with your own costs and rates.</p>
+            <summary>Does it work for my product?</summary>
+            <p>Yes. Coffee, rice, cashews, spices, fruit, seafood, or furniture follow the same steps with your own costs.</p>
           </details>
         </div>
       </div>
@@ -341,43 +236,11 @@
       </section>
     </div>
   </main>
-
   <footer class="site-footer">
     <div class="legal">
       <a href="index.html">All use cases</a>
     </div>
   </footer>
-
-  <!-- Documents opened from the draft's attachments -->
-  <dialog class="doc" id="doc-quote" aria-label="Quotation Q-2026-1117-01">
-    <form method="dialog"><button class="doc-close" aria-label="Close">×</button></form>
-    <article class="paper">
-      <header><div class="q-brand">Lak Highlands<span>Coffee · Buon Ma Thuot, Viet Nam</span></div><div class="q-no">Quotation<span>Q-2026-1117-01 · 17 Nov 2026</span></div></header>
-      <div class="parties"><div><h4>Seller</h4>Lak Highlands Coffee Co.<br>Buon Ma Thuot, Viet Nam</div><div><h4>Buyer</h4>Nordkaffee Import GmbH<br>Hamburg, Germany</div></div>
-      <h4>Product</h4>
-      <p>Vietnam Robusta Grade 1, Screen 18, wet polished. Moisture max 12.5%, black &amp; broken max 2%, crop 2026/27. HS 0901.11.</p>
-      <p>19.2 MT (320 jute bags × 60 kg), +/−5% at seller's option, 1×20′ dry container.</p>
-      <h4>Prices, USD per MT</h4>
-      <table><tr class="main"><td>CIF Hamburg Incoterms 2020</td><td>5,012.00</td></tr><tr><td>FCA Cat Lai container terminal Incoterms 2020</td><td>4,882.00</td></tr><tr><td>FOB Cat Lai · CFR Hamburg</td><td>4,891.00 · 5,003.00</td></tr></table>
-      <p>Insurance: 110% of invoice value, ICC (C). Freight basis USD 2,150 per 20′ to 30 Nov 2026; any difference at booking adjusted at cost.</p>
-      <p>Payment: irrevocable L/C at sight, UCP 600. Shipment: January 2027, Cat Lai to Hamburg.</p>
-      <p>Documents: commercial invoice, packing list, B/L, insurance certificate, C/O, phytosanitary and fumigation certificates, EUDR geolocation data.</p>
-      <p>Valid until 24 Nov 2026.</p>
-    </article>
-  </dialog>
-  <dialog class="doc" id="doc-pi" aria-label="Proforma invoice PI-2026-0412">
-    <form method="dialog"><button class="doc-close" aria-label="Close">×</button></form>
-    <article class="paper">
-      <header><div class="q-brand">Lak Highlands<span>Coffee · Buon Ma Thuot, Viet Nam</span></div><div class="q-no">Proforma invoice<span>PI-2026-0412 · 17 Nov 2026</span></div></header>
-      <div class="parties"><div><h4>Beneficiary</h4>Lak Highlands Coffee Co.<br>Buon Ma Thuot, Viet Nam</div><div><h4>Applicant</h4>Nordkaffee Import GmbH<br>Hamburg, Germany<br>Ref. Q-2026-1117-01</div></div>
-      <p>Port of loading: Cat Lai, Ho Chi Minh City. Port of discharge: Hamburg. Latest shipment 31 Jan 2027, partial shipment not allowed. CIF Hamburg Incoterms 2020.</p>
-      <table><tr><td>Vietnam Robusta G1, Screen 18, wet polished, HS 0901.11 · 19.2 MT × USD 5,012.00</td><td>96,230.40</td></tr><tr class="main"><td>Total, USD (+/−5% at seller's option)</td><td>96,230.40</td></tr></table>
-      <p>US Dollars Ninety-Six Thousand Two Hundred Thirty and Forty Cents.</p>
-      <p>Insurance: 110% of invoice value (USD 105,853.44), ICC (C).</p>
-      <p>Payment: irrevocable L/C at sight, UCP 600, opened by 15 Dec 2026; documents within 21 days after shipment. Bank details from your company records.</p>
-    </article>
-  </dialog>
-
-  <script src="export-quotes.js" defer></script>
+  <script src="export-quotes-a.js" defer></script>
 </body>
 </html>
