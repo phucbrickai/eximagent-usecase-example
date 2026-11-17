@@ -440,6 +440,8 @@ a.card p { margin: 0; font-size: 14px; line-height: 20px; color: var(--muted-fg)
 @media (max-width: 599px) {
   .subnav .row { width: 100%; padding: 0 12px; }
   .subnav nav a { padding: 6px 8px; font-size: 13px; }
+  .brand .word span { display: none; }
+  .brand .word { font-size: 18px; }
 }
 
 /* How they work together — horizontal gallery */
@@ -543,3 +545,106 @@ a.card p { margin: 0; font-size: 14px; line-height: 20px; color: var(--muted-fg)
 @media (prefers-reduced-motion: reduce) {
   .gallery-track { scroll-behavior: auto; }
 }
+
+/* Template library switcher */
+.template-lib { margin-top: 28px; }
+.template-lib-label {
+  margin: 0 0 12px;
+  font-size: 15px;
+  line-height: 22px;
+  color: var(--muted-fg);
+}
+.template-switcher {
+  display: flex;
+  align-items: stretch;
+  gap: 10px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  padding: 4px 2px 10px;
+  margin: 0 -2px;
+}
+.tpl {
+  flex: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 14px 6px 6px;
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  background: #fff;
+  min-height: 56px;
+  transition: border-color .15s, background-color .15s, box-shadow .15s;
+}
+.tpl img {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  object-fit: cover;
+  display: block;
+}
+.tpl > span {
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 600;
+  letter-spacing: -.2px;
+  white-space: nowrap;
+}
+.tpl:hover { border-color: var(--border-strong); background: var(--hover); }
+.tpl[aria-pressed="true"] {
+  border-color: var(--primary);
+  background: var(--selected);
+  box-shadow: 0 0 0 1px var(--primary);
+}
+.tpl-yours {
+  border-style: dashed;
+  padding-left: 12px;
+}
+.tpl-yours .plus {
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background: var(--muted);
+  color: var(--primary-text);
+  display: grid;
+  place-items: center;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+/* Crossfade when switching templates */
+.swap { position: relative; }
+.swap > img { width: 100%; height: auto; display: block; }
+.swap > img.is-next {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  pointer-events: none;
+}
+.swap.is-animate > img { transition: opacity .4s var(--ease); }
+.swap.is-animate > img.is-next.is-in { opacity: 1; }
+.gallery-media.swap > img.is-current,
+.gallery-media.swap > img.is-next {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left center;
+}
+.gallery-media.swap > img.is-current { opacity: 1; }
+.gallery-media.swap > img.is-next { opacity: 0; }
+.prompt-chip [data-prompt] { transition: opacity .2s var(--ease); }
+.prompt-chip.is-fade [data-prompt] { opacity: 0; }
+@media (prefers-reduced-motion: reduce) {
+  .swap.is-animate > img,
+  .prompt-chip [data-prompt] { transition: none; }
+}
+
+.hero-visual { margin-top: 20px; }
+.hero-visual .swap { aspect-ratio: 16 / 9; background: var(--muted); }
+.hero-visual .swap > img.is-current { height: 100%; object-fit: cover; }

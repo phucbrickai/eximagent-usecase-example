@@ -61,9 +61,38 @@
         </div>
       </header>
 
+      <div class="template-lib" data-template-lib>
+        <p class="template-lib-label">Same team, different products. Pick one to see it.</p>
+        <div class="template-switcher" role="group" aria-label="Website templates">
+          <a class="tpl" href="?template=cashew" data-template="cashew" aria-pressed="true">
+            <img src="images/products/thumb-cashew.jpg" alt="">
+            <span>Cashew</span>
+          </a>
+          <a class="tpl" href="?template=coffee" data-template="coffee" aria-pressed="false">
+            <img src="images/products/thumb-coffee.jpg" alt="">
+            <span>Coffee</span>
+          </a>
+          <a class="tpl" href="?template=durian" data-template="durian" aria-pressed="false">
+            <img src="images/products/thumb-durian.jpg" alt="">
+            <span>Durian</span>
+          </a>
+          <a class="tpl" href="?template=spice" data-template="spice" aria-pressed="false">
+            <img src="images/products/thumb-spice.jpg" alt="">
+            <span>Spice</span>
+          </a>
+          <a class="tpl tpl-yours" href="https://eximagent.ai/">
+            <span class="plus" aria-hidden="true">+</span>
+            <span>Your product</span>
+          </a>
+        </div>
+      </div>
+
       <div class="frame hero-visual">
-        <img src="images/website-hero.jpg" alt="Finished website for Phuoc An Cashew in a browser, with product grades and a Request a quote button.">
-        <div class="prompt-chip"><span class="dot">+</span> Hire a website team for our cashew export company</div>
+        <div class="swap" data-swap="hero">
+          <img class="is-current" src="images/templates/cashew/website-hero.jpg" alt="Finished website for Phuoc An Cashew in a browser, with product grades and a Request a quote button.">
+          <img class="is-next" alt="" aria-hidden="true">
+        </div>
+        <div class="prompt-chip"><span class="dot">+</span> <span data-prompt>Hire a website team for our cashew export company</span></div>
       </div>
     </div>
 
@@ -73,28 +102,48 @@
         <p class="section-lead">Four employees, one company brain.</p>
         <div class="agent-grid">
           <article class="agent-card">
-            <div class="frame"><img src="images/agent-seo.jpg" alt="SEO agent updating the Products meta title to W320 cashew supplier, after researching terms EU buyers use."></div>
+            <div class="frame">
+              <div class="swap" data-swap="seo">
+                <img class="is-current" src="images/templates/cashew/agent-seo.jpg" alt="SEO agent updating the Products meta title to W320 cashew supplier, after researching terms EU buyers use.">
+                <img class="is-next" alt="" aria-hidden="true">
+              </div>
+            </div>
             <div class="body">
               <h3>SEO</h3>
               <p>Maps the search terms buyers use.</p>
             </div>
           </article>
           <article class="agent-card">
-            <div class="frame"><img src="images/agent-designer.jpg" alt="Designer arranging homepage, catalog, and quote form layout blocks for the cashew site."></div>
+            <div class="frame">
+              <div class="swap" data-swap="designer">
+                <img class="is-current" src="images/templates/cashew/agent-designer.jpg" alt="Designer arranging homepage, catalog, and quote form layout blocks for the cashew site.">
+                <img class="is-next" alt="" aria-hidden="true">
+              </div>
+            </div>
             <div class="body">
               <h3>Designer</h3>
               <p>Lays out the homepage, catalog, and quote form.</p>
             </div>
           </article>
           <article class="agent-card">
-            <div class="frame"><img src="images/agent-writer.jpg" alt="Content Writer drafting the W320 product page from company-brain facts: products, certificates, and profile."></div>
+            <div class="frame">
+              <div class="swap" data-swap="writer">
+                <img class="is-current" src="images/templates/cashew/agent-writer.jpg" alt="Content Writer drafting the W320 product page from company-brain facts: products, certificates, and profile.">
+                <img class="is-next" alt="" aria-hidden="true">
+              </div>
+            </div>
             <div class="body">
               <h3>Content Writer</h3>
               <p>Drafts product pages from your company knowledge.</p>
             </div>
           </article>
           <article class="agent-card">
-            <div class="frame"><img src="images/agent-analytics.jpg" alt="Analytics reading a weekly activity chart and posting the Monday report to the team."></div>
+            <div class="frame">
+              <div class="swap" data-swap="analytics">
+                <img class="is-current" src="images/templates/cashew/agent-analytics.jpg" alt="Analytics reading a weekly activity chart and posting the Monday report to the team.">
+                <img class="is-next" alt="" aria-hidden="true">
+              </div>
+            </div>
             <div class="body">
               <h3>Analytics</h3>
               <p>Reports every Monday so the team can improve.</p>
@@ -134,8 +183,9 @@
                 <h3>You set a goal</h3>
                 <p>Type what the site should do — a catalog, certificates, and a quote form.</p>
               </div>
-              <div class="gallery-media">
-                <img src="images/step-goal.jpg" alt="A new task for the website team, with the goal typed into the composer: build a site for a cashew export company, with a catalog, certificates, and a quote form.">
+              <div class="gallery-media swap" data-swap="goal">
+                <img class="is-current" src="images/templates/cashew/step-goal.jpg" alt="A new task for the website team, with the goal typed into the composer: build a site for a cashew export company, with a catalog, certificates, and a quote form.">
+                <img class="is-next" alt="" aria-hidden="true">
               </div>
             </article>
             <article class="gallery-slide">
@@ -144,8 +194,9 @@
                 <h3>Designer + Writer build the pages</h3>
                 <p>They work from your company brain: products, certificates, and profile.</p>
               </div>
-              <div class="gallery-media">
-                <img src="images/step-build.jpg" alt="Company brain with products, certificates, and profile feeding into a homepage and catalog, as Designer and Content Writer work.">
+              <div class="gallery-media swap" data-swap="build">
+                <img class="is-current" src="images/templates/cashew/step-build.jpg" alt="Company brain with products, certificates, and profile feeding into a homepage and catalog, as Designer and Content Writer work.">
+                <img class="is-next" alt="" aria-hidden="true">
               </div>
             </article>
             <article class="gallery-slide">
@@ -154,8 +205,9 @@
                 <h3>SEO optimizes each page</h3>
                 <p>Search terms buyers use are mapped to the pages, and titles are updated.</p>
               </div>
-              <div class="gallery-media">
-                <img src="images/step-seo.jpg" alt="SEO editing the Products meta title and mapping search terms to Home, Products, and Certificates pages.">
+              <div class="gallery-media swap" data-swap="step-seo">
+                <img class="is-current" src="images/templates/cashew/step-seo.jpg" alt="SEO editing the Products meta title and mapping search terms to Home, Products, and Certificates pages.">
+                <img class="is-next" alt="" aria-hidden="true">
               </div>
             </article>
             <article class="gallery-slide">
@@ -164,8 +216,9 @@
                 <h3>Analytics posts the Monday report</h3>
                 <p>Every Monday, a report goes to the team.</p>
               </div>
-              <div class="gallery-media">
-                <img src="images/step-report.jpg" alt="Analytics posting the Monday report, with a weekly activity chart and a message to the website team.">
+              <div class="gallery-media swap" data-swap="report">
+                <img class="is-current" src="images/templates/cashew/step-report.jpg" alt="Analytics posting the Monday report, with a weekly activity chart and a message to the website team.">
+                <img class="is-next" alt="" aria-hidden="true">
               </div>
             </article>
             <article class="gallery-slide">
@@ -174,8 +227,9 @@
                 <h3>The team hands work to each other</h3>
                 <p>They pick the next improvements and pass the work along in the work log.</p>
               </div>
-              <div class="gallery-media">
-                <img src="images/step-handoff.jpg" alt="Work log showing Analytics, SEO, Content Writer, and Designer handing the next improvements to each other.">
+              <div class="gallery-media swap" data-swap="handoff">
+                <img class="is-current" src="images/templates/cashew/step-handoff.jpg" alt="Work log showing Analytics, SEO, Content Writer, and Designer handing the next improvements to each other.">
+                <img class="is-next" alt="" aria-hidden="true">
               </div>
             </article>
           </div>
@@ -271,6 +325,195 @@
       });
       window.addEventListener("resize", function () { go(index()); });
       sync();
+    })();
+
+    (function () {
+      var BASE = "images/templates/";
+      function pack(slug, parts) {
+        var p = BASE + slug + "/";
+        return {
+          prompt: parts.prompt,
+          hero: { src: p + "website-hero.jpg", alt: parts.hero },
+          seo: { src: p + "agent-seo.jpg", alt: parts.seo },
+          designer: { src: p + "agent-designer.jpg", alt: parts.designer },
+          writer: { src: p + "agent-writer.jpg", alt: parts.writer },
+          analytics: { src: p + "agent-analytics.jpg", alt: parts.analytics },
+          goal: { src: p + "step-goal.jpg", alt: parts.goal },
+          build: { src: p + "step-build.jpg", alt: parts.build },
+          "step-seo": { src: p + "step-seo.jpg", alt: parts.stepSeo },
+          report: { src: p + "step-report.jpg", alt: parts.report },
+          handoff: { src: p + "step-handoff.jpg", alt: parts.handoff }
+        };
+      }
+      var TEMPLATES = {
+        cashew: pack("cashew", {
+          prompt: "Hire a website team for our cashew export company",
+          hero: "Finished website for Phuoc An Cashew in a browser, with product grades and a Request a quote button.",
+          seo: "SEO agent updating the Products meta title to W320 cashew supplier, after researching terms EU buyers use.",
+          designer: "Designer arranging homepage, catalog, and quote form layout blocks for the cashew site.",
+          writer: "Content Writer drafting the W320 product page from company-brain facts: products, certificates, and profile.",
+          analytics: "Analytics reading a weekly activity chart and posting the Monday report to the Phuoc An team.",
+          goal: "A new task for the website team, with the goal typed into the composer: build a site for a cashew export company, with a catalog, certificates, and a quote form.",
+          build: "Company brain with products, certificates, and profile feeding into a homepage and catalog, as Designer and Content Writer work.",
+          stepSeo: "SEO editing the Products meta title and mapping search terms to Home, Products, and Certificates pages.",
+          report: "Analytics posting the Monday report, with a weekly activity chart and a message to the website team.",
+          handoff: "Work log showing Analytics, SEO, Content Writer, and Designer handing the next improvements to each other."
+        }),
+        coffee: pack("coffee", {
+          prompt: "Hire a website team for our coffee export company",
+          hero: "Finished website for Cerrado Alto Coffee in a browser, with green coffee grades and a Request a quote button.",
+          seo: "SEO agent updating the Products meta title to Arabica Grade 1 supplier, after researching terms EU roasters use.",
+          designer: "Designer arranging homepage, catalog, and quote form layout blocks for the Cerrado Alto Coffee site.",
+          writer: "Content Writer drafting the Arabica Grade 1 product page from company-brain facts: products, certificates, and profile.",
+          analytics: "Analytics reading a weekly activity chart and posting the Monday report to the Cerrado Alto team.",
+          goal: "A new task for the website team, with the goal typed into the composer: build a site for a coffee export company, with a catalog, certificates, and a quote form.",
+          build: "Company brain for Cerrado Alto Coffee feeding into a homepage and catalog, as Designer and Content Writer work.",
+          stepSeo: "SEO editing the Products meta title for Arabica Grade 1 and mapping search terms to Home, Products, and Certificates pages.",
+          report: "Analytics posting the Monday report for the Cerrado Alto site, with a weekly activity chart and a message to the website team.",
+          handoff: "Work log showing the team handing off the next improvements on the Fine Robusta page."
+        }),
+        durian: pack("durian", {
+          prompt: "Hire a website team for our durian export company",
+          hero: "Finished website for Aroma King Durian in a browser, with fresh and frozen products and a Request a quote button.",
+          seo: "SEO agent updating the Products meta title to Monthong durian exporter, after researching terms buyers use.",
+          designer: "Designer arranging homepage, catalog, and quote form layout blocks for the Aroma King Durian site.",
+          writer: "Content Writer drafting the Monthong pulp product page from company-brain facts: products, certificates, and profile.",
+          analytics: "Analytics reading a weekly activity chart and posting the Monday report to the Aroma King team.",
+          goal: "A new task for the website team, with the goal typed into the composer: build a site for a durian export company, with a catalog, certificates, and a quote form.",
+          build: "Company brain for Aroma King Durian feeding into a homepage and catalog, as Designer and Content Writer work.",
+          stepSeo: "SEO editing the Products meta title for Monthong durian and mapping search terms to Home, Products, and Certificates pages.",
+          report: "Analytics posting the Monday report for the Aroma King site, with a weekly activity chart and a message to the website team.",
+          handoff: "Work log showing the team handing off the next improvements on the Monthong page."
+        }),
+        spice: pack("spice", {
+          prompt: "Hire a website team for our spice export company",
+          hero: "Finished website for Red Sail Spice in a browser, with black pepper, cinnamon, and star anise, and a Request a quote button.",
+          seo: "SEO agent updating the Products meta title to ASTA black pepper supplier, after researching terms buyers use.",
+          designer: "Designer arranging homepage, catalog, and quote form layout blocks for the Red Sail Spice site.",
+          writer: "Content Writer drafting the black pepper product page from company-brain facts: products, certificates, and profile.",
+          analytics: "Analytics reading a weekly activity chart and posting the Monday report to the Red Sail team.",
+          goal: "A new task for the website team, with the goal typed into the composer: build a site for a spice export company, with a catalog, certificates, and a quote form.",
+          build: "Company brain for Red Sail Spice feeding into a homepage and catalog, as Designer and Content Writer work.",
+          stepSeo: "SEO editing the Products meta title for ASTA black pepper and mapping search terms to Home, Products, and Certificates pages.",
+          report: "Analytics posting the Monday report for the Red Sail site, with a weekly activity chart and a message to the website team.",
+          handoff: "Work log showing the team handing off the next improvements on the cinnamon page."
+        })
+      };
+      var DEFAULT = "cashew";
+      var lib = document.querySelector("[data-template-lib]");
+      if (!lib) return;
+      var buttons = lib.querySelectorAll(".tpl[data-template]");
+      var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var current = DEFAULT;
+      var booted = false;
+
+      function fromUrl() {
+        var q = new URLSearchParams(window.location.search).get("template");
+        if (q) q = String(q).toLowerCase();
+        if (q && TEMPLATES[q]) return q;
+        var h = (window.location.hash || "").replace(/^#/, "").toLowerCase();
+        if (h && TEMPLATES[h]) return h;
+        return DEFAULT;
+      }
+
+      function fadeImg(container, src, alt, instant) {
+        var cur = container.querySelector("img.is-current");
+        var next = container.querySelector("img.is-next");
+        if (!cur) return;
+        if (!src || cur.getAttribute("src") === src) {
+          if (alt) cur.alt = alt;
+          return;
+        }
+        if (!next || instant || reduce) {
+          cur.src = src;
+          cur.alt = alt || "";
+          if (next) {
+            next.removeAttribute("src");
+            next.alt = "";
+            next.classList.remove("is-in");
+          }
+          return;
+        }
+        if (next._swapTimer) {
+          clearTimeout(next._swapTimer);
+          next._swapTimer = null;
+        }
+        var finished = false;
+        function finish() {
+          if (finished) return;
+          finished = true;
+          next.onload = null;
+          next.classList.remove("is-next", "is-in");
+          next.classList.add("is-current");
+          cur.classList.remove("is-current");
+          cur.classList.add("is-next");
+          cur.removeAttribute("src");
+          cur.alt = "";
+          cur.setAttribute("aria-hidden", "true");
+          next.removeAttribute("aria-hidden");
+          next.alt = alt || "";
+          container.classList.remove("is-animate");
+          next._swapTimer = null;
+        }
+        next.alt = "";
+        next.setAttribute("aria-hidden", "true");
+        next.classList.remove("is-in");
+        container.classList.add("is-animate");
+        next.onload = function () {
+          next.getBoundingClientRect();
+          next.classList.add("is-in");
+          next._swapTimer = setTimeout(finish, 450);
+        };
+        next.src = src;
+      }
+
+      function apply(id, push) {
+        if (!TEMPLATES[id]) id = DEFAULT;
+        var t = TEMPLATES[id];
+        var instant = !booted;
+        booted = true;
+        current = id;
+        buttons.forEach(function (b) {
+          var on = b.getAttribute("data-template") === id;
+          b.setAttribute("aria-pressed", on ? "true" : "false");
+        });
+        ["hero", "seo", "designer", "writer", "analytics", "goal", "build", "step-seo", "report", "handoff"].forEach(function (k) {
+          var el = document.querySelector('[data-swap="' + k + '"]');
+          if (el && t[k]) fadeImg(el, t[k].src, t[k].alt, instant);
+        });
+        var prompt = document.querySelector("[data-prompt]");
+        if (prompt && prompt.textContent !== t.prompt) {
+          var chip = prompt.closest(".prompt-chip");
+          function setText() {
+            prompt.textContent = t.prompt;
+            if (chip) chip.classList.remove("is-fade");
+          }
+          if (instant || reduce) setText();
+          else {
+            if (chip) chip.classList.add("is-fade");
+            setTimeout(setText, 180);
+          }
+        }
+        if (push) {
+          var url = "?template=" + encodeURIComponent(id);
+          if (window.location.search !== url || window.location.hash) {
+            history.pushState({ template: id }, "", url);
+          }
+        }
+      }
+
+      buttons.forEach(function (b) {
+        b.addEventListener("click", function (e) {
+          var id = b.getAttribute("data-template");
+          if (!TEMPLATES[id]) return;
+          e.preventDefault();
+          if (id === current) return;
+          apply(id, true);
+        });
+      });
+      window.addEventListener("popstate", function () { apply(fromUrl(), false); });
+      window.addEventListener("hashchange", function () { apply(fromUrl(), false); });
+      apply(fromUrl(), false);
     })();
   </script>
 </body>
